@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SITE_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$SITE_ROOT"
+
+# Keep downloaded tools, dependencies, and caches inside this checkout.
+export GEM_HOME="$SITE_ROOT/.gems"
+export GEM_PATH="$GEM_HOME"
+export GEM_SPEC_CACHE="$GEM_HOME/specs"
+export BUNDLE_PATH="$SITE_ROOT/vendor/bundle"
+export BUNDLE_USER_HOME="$SITE_ROOT/.bundle/user"
+
+SITE_COMMAND="${1:-serve}"
+if [[ $# -gt 0 ]]; then shift; fi
+
+if [[ "$SITE_COMMAND" == "install" ]]; then
+  if [[ ! -f "$GEM_HOME/bin/bundle" ]]; then
+    gem install bundler --version 2.4.22 --no-document
+  fi
+  exec ruby -EUTF-8:UTF-8 "$GEM_HOME/bin/bundle" install "$@"
+fi
+
+if [[ ! -f "$GEM_HOME/bin/bundle" ]]; then
+  printf '%s\n' 'Run ./scripts/site install first.' >&2
+  exit 1
+fi
+
+case "$SITE_COMMAND" in
+  serve)
+    exec ruby -EUTF-8:UTF-8 "$GEM_HOME/bin/bundle" exec jekyll serve --host 127.0.0.1 "$@"
+    ;;
+  build)
+    exec ruby -EUTF-8:UTF-8 "$GEM_HOME/bin/bundle" exec jekyll build "$@"
+    ;;
+  *)
+    printf '%s\n' 'Usage: ./scripts/site [install|serve|build] [options]' >&2
+    exit 2
+    ;;
+esac

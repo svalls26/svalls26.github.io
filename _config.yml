@@ -1,0 +1,43 @@
+title: "Sara Valls"
+name: "Sara Valls"
+description: "Sara Valls — machine learning, human-centred AI, and collaboration with domain experts."
+url: ""
+baseurl: ""
+locale: "en-GB"
+encoding: "utf-8"
+
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: contrast
+search: false
+breadcrumbs: false
+
+author:
+  name: "Sara Valls"
+  avatar: "/assets/images/portrait.jpg"
+  home: "/"
+  bio: "Machine learning & human-centred AI"
+
+footer:
+  since: "2026"
+
+plugins:
+  - jekyll-include-cache
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - work
+  - scripts
+
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
