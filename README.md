@@ -26,6 +26,8 @@ As visitors scroll through Background, a purple line grows along each timeline a
 
 The Research page presents the MPhil thesis in five sections, with a sticky contents menu on the left on desktop and an in-flow menu on smaller screens. The current section is highlighted as the reader scrolls. The full thesis is linked at the top; the section summaries are drawn from the supplied dissertation. `assets/js/research.js` enhances the standard section links, which also work without JavaScript.
 
+The methodology figure in `_includes/methodology-diagram.html` recreates Sara’s supplied three-phase diagram as a compact inline SVG. It preserves the findings, retrieval pipeline, evaluation, and requirements connections, using the site’s typography and colours. On smaller screens, the figure scrolls horizontally rather than shrinking its labels. It includes a complete text description for screen readers.
+
 The opening photograph is hosted locally and credited to Cambridge University Library via Google Arts & Culture. See `assets/images/research/SOURCES.md` for its source and attribution. The introductory paragraph follows the wording supplied by Sara.
 
 ## Chess replay

@@ -586,11 +586,120 @@ body {
   }
 }
 
-.research-phases {
-  padding-left: 1.2rem;
+.methodology-figure {
+  display: block;
+  margin: 1.5rem 0 0;
 
-  li { padding-left: 0.3rem; margin-bottom: 0.9rem; }
-  li::marker { color: $link-color; }
+  figcaption {
+    margin-top: 0.8rem;
+    color: $muted-text-color;
+    font-family: $sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+}
+
+.methodology-figure__scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+
+  &:focus-visible {
+    outline: 2px solid $link-color;
+    outline-offset: 5px;
+  }
+}
+
+.methodology-diagram {
+  display: block;
+  width: 100%;
+  min-width: 36rem;
+  height: auto;
+  font-family: $sans-serif;
+  font-size: 14.5px;
+
+  text { fill: $text-color; }
+}
+
+.methodology-diagram__phase {
+  font-weight: 600;
+
+  > text { fill: $link-color; }
+
+  .methodology-diagram__phase-name {
+    fill: $muted-text-color;
+    font-size: 13.5px;
+    font-weight: 400;
+  }
+}
+
+.methodology-diagram__study,
+.methodology-diagram__artefact,
+.methodology-diagram__output {
+  text { text-anchor: middle; font-weight: 500; }
+}
+
+.methodology-diagram__study {
+  ellipse { fill: #e2eeea; stroke: #a8c0b6; }
+  text { fill: #345e50; }
+}
+
+.methodology-diagram__artefact rect { fill: #f0eeea; stroke: #d8d3da; }
+
+.methodology-diagram__output {
+  rect { fill: #ece5f1; stroke: #c9b8d6; }
+  text { fill: #5d4473; }
+}
+
+.methodology-diagram .methodology-diagram__secondary {
+  font-size: 12.5px;
+  font-weight: 400;
+}
+
+.methodology-diagram__connector {
+  fill: none;
+  stroke: #8a7d93;
+  stroke-width: 1.2;
+  stroke-linejoin: round;
+}
+
+.methodology-diagram__pipeline {
+  fill: none;
+  stroke: #bbaeC2;
+  stroke-dasharray: 4 4;
+}
+
+.methodology-diagram .methodology-diagram__note {
+  fill: $muted-text-color;
+  font-size: 12.5px;
+}
+
+.methodology-diagram__edge-label {
+  paint-order: stroke;
+  stroke: $background-color;
+  stroke-width: 8px;
+  stroke-linejoin: round;
+}
+
+.methodology-diagram .methodology-diagram__result {
+  font-family: $serif;
+  font-size: 18px;
+}
+
+.methodology-diagram__legend {
+  font-size: 12px;
+
+  text { fill: $muted-text-color; }
+}
+
+.methodology-diagram__legend-study { fill: #a8c0b6; }
+.methodology-diagram__legend-artefact { fill: #d8d3da; }
+.methodology-diagram__legend-output { fill: #c9b8d6; }
+.methodology-figure__pan-hint { display: none; }
+
+@media (max-width: 700px) {
+  .methodology-figure__pan-hint { display: inline; }
 }
 
 @media (max-width: 850px) {

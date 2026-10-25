@@ -38,12 +38,8 @@ classes:
 
     <section id="methodology" class="research-section" aria-labelledby="methodology-heading">
       <h2 id="methodology-heading">Methodology</h2>
-      <p>I followed a participatory design approach, grounding the technical work in the practices and needs of Hebrew manuscript scholars. The research moved through three connected phases:</p>
-      <ol class="research-phases">
-        <li><strong>Understand the task.</strong> Interviews and think-aloud join exercises documented how scholars search for and assess possible matches, informing the system’s design requirements.</li>
-        <li><strong>Develop the retrieval pipeline.</strong> A computer vision system ranked potential joins by visual similarity, using a corpus of expert-labelled join groups for evaluation.</li>
-        <li><strong>Integrate the system.</strong> The ranking model and the scholars’ requirements came together in Genida’at, an interface for discovery, comparison and join recording.</li>
-      </ol>
+      <p>I followed a participatory design approach, grounding the technical work in the practices and needs of Hebrew manuscript scholars. The research moved through three connected phases.</p>
+      {% include methodology-diagram.html %}
     </section>
 
     <section id="join-problem" class="research-section" aria-labelledby="join-problem-heading">
