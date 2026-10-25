@@ -14,3 +14,5 @@ classes:
   <p>My research interests span the use of AI for complex, context-dependent tasks, leveraging human expertise to improve decision making. I am also interested in how models can be adapted through interaction data. My goal is to bring AI closer to expert domains and create meaningful impact across history, science and society.</p>
   <p>Previously, I worked as a data engineer at startups and big tech, and lived in Switzerland, Spain and Luxembourg. I also played competitive chess during high school, winning several regional championships and reaching a rating of 2000. You can check out my “immortal game” <a href="{{ '/chess/' | relative_url }}" aria-label="Replay my immortal chess game">here</a>.</p>
 </div>
+
+{% include background.html %}

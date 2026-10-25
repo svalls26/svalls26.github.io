@@ -146,6 +146,109 @@ body {
   text-transform: uppercase;
 }
 
+.page__content .background {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e6e2e9;
+
+  .bio__eyebrow {
+    padding: 0;
+    border: 0;
+    margin-bottom: 1.6rem;
+  }
+
+  h3 {
+    margin: 0 0 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+}
+
+.background__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.4rem;
+  align-items: start;
+}
+
+.page__content .timeline {
+  position: relative;
+  margin: 0 0 0 0.3rem;
+  padding: 0;
+  list-style: none;
+
+  &::before {
+    position: absolute;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    left: 0;
+    width: 1px;
+    background: #d4c8df;
+    content: "";
+  }
+
+  h4 {
+    margin: 0 0 0.4rem;
+    font-family: $sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  p { margin: 0; }
+}
+
+.timeline__item {
+  position: relative;
+  padding: 0 0 1.9rem 1.3rem;
+
+  &:last-child { padding-bottom: 0; }
+
+  &::before {
+    position: absolute;
+    top: 0.4rem;
+    left: -0.22rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: $link-color;
+    box-shadow: 0 0 0 4px $background-color;
+    content: "";
+  }
+}
+
+.timeline__organisation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.65rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.timeline__logo {
+  flex-shrink: 0;
+  width: 90px;
+  height: auto;
+}
+
+.page__content .timeline__period {
+  margin-top: 0.45rem;
+  color: $muted-text-color;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.timeline__status { color: $link-color; font-weight: 600; }
+
+.page__content .timeline__detail {
+  margin-top: 0.55rem;
+  color: #57515f;
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
 .page__footer {
   margin-top: 0;
   border-top: 1px solid #e6e2e9;
@@ -259,6 +362,8 @@ button:focus-visible {
   .page__footer footer { padding-inline: 1.4rem; }
 
   #main { padding-top: 2.3rem; }
+
+  .background__grid { grid-template-columns: 1fr; gap: 2.5rem; }
 
   .author__avatar {
     flex-basis: 130px;

@@ -1,0 +1,23 @@
+<section id="background" class="background" aria-labelledby="background-heading">
+  <h2 id="background-heading" class="bio__eyebrow">Background</h2>
+  <div class="background__grid">
+    {% for column in site.data.background %}
+    <section class="background__column" aria-labelledby="{{ column.id }}-heading">
+      <h3 id="{{ column.id }}-heading">{{ column.heading }}</h3>
+      <ol class="timeline">
+        {% for entry in column.entries %}
+        <li class="timeline__item">
+          <h4>{{ entry.title }}</h4>
+          <p class="timeline__organisation">
+            <span>{{ entry.organisation }}</span>
+            {% if entry.logo %}<img class="timeline__logo" src="{{ entry.logo | relative_url }}" alt="" width="90" height="19" loading="lazy">{% endif %}
+          </p>
+          <p class="timeline__period">{% if entry.upcoming %}<span class="timeline__status">Upcoming · </span>{% endif %}{{ entry.period }}<br>{{ entry.location }}</p>
+          {% if entry.detail %}<p class="timeline__detail">{{ entry.detail }}</p>{% endif %}
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
+    {% endfor %}
+  </div>
+</section>

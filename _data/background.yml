@@ -1,0 +1,35 @@
+- id: education
+  heading: Education
+  entries:
+    - title: MPhil in Machine Learning and Machine Intelligence
+      organisation: University of Cambridge
+      logo: /assets/images/institutions/cambridge.svg
+      period: Oct 2025 – Sep 2026
+      location: Cambridge, UK
+    - title: BSc Data Science
+      organisation: Universidad Europea de Valencia
+      period: Sep 2019 – Jun 2023
+      location: Valencia, Spain
+      detail: Outstanding Student Award, STEM School (17 subjects with honours)
+- id: work-experience
+  heading: Work Experience
+  entries:
+    - title: Research Assistant
+      organisation: University of Cambridge
+      period: Nov 2026 – Apr 2027
+      location: Cambridge, UK
+      upcoming: true
+      detail: Department of Engineering · ai@cam AI-deas Sprint
+    - title: Data Engineer
+      organisation: Token Flow
+      period: Apr 2023 – Sep 2025
+      location: Geneva, Switzerland
+    - title: Data Engineer
+      organisation: Philip Morris International
+      period: Sep 2022 – Apr 2023
+      location: Madrid, Spain
+    - title: Business Intelligence Engineer Intern
+      organisation: Amazon
+      period: Feb 2022 – Sep 2022
+      location: Luxembourg
+      detail: Air Network Planning

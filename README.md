@@ -6,12 +6,15 @@ A personal website with About, Research, and Chess pages, built with Jekyll and 
 
 - Set your name and site description in `_config.yml`.
 - Edit the short bio in `index.md`.
+- Edit education and work timeline entries in `_data/background.yml`.
 - Edit the Research and Chess pages in `research.md` and `chess.md`.
 - Change the navigation order in `_data/navigation.yml`.
 - Replace `assets/images/portrait.jpg` to update the photo.
 - Customize fonts, colours, and spacing in `assets/css/main.scss`.
 
 The portrait is the original supplied photograph; it has not been retouched.
+
+The background section uses two vertical timelines on desktop and stacks them on phones. Dates and roles are taken from the supplied CV; the Cambridge Research Assistant role is marked as upcoming. The Cambridge logo is the unmodified SVG from the [University website](https://www.cam.ac.uk/themes/custom/fresh/images/interface/cambridge_university2.svg), used beside the education entry.
 
 ## Chess replay
 
