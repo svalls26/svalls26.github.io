@@ -9,7 +9,7 @@ classes:
 
 <section aria-labelledby="chess-heading">
   <h1 id="chess-heading" class="bio__eyebrow">Chess</h1>
-  <p>The term <a href="https://en.wikipedia.org/wiki/Immortal_Game"><em>immortal game</em></a> was originally used for the game between Anderssen and Kieseritzky, played during a break in the London 1851 tournament, in which the player with the white pieces sacrificed most of his material to deliver checkmate. Today the term is more often used for the best game of a player’s career. My own “immortal game” is the one below, where I beat a FIDE Master in the second round of the Spanish U18 championship, held in Salobreña in 2018. If only it could always be like this.</p>
+  <p>The term <a href="https://en.wikipedia.org/wiki/Immortal_Game"><em>immortal game</em></a> was originally used for the game between Anderssen and Kieseritzky, played during a break in the London 1851 tournament, in which the player with the white pieces sacrificed most of his material to deliver checkmate. Today the term is more often used for the best game of a player’s career. My own “immortal game” is the one below, where I beat a FIDE Master in the second round of the Spanish U18 championship, held in Salobreña in 2018.</p>
 </section>
 
 <section id="immortal-game" class="chess-section" aria-label="Chess game replay">
