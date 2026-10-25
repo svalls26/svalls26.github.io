@@ -100,7 +100,7 @@ classes:
           <blockquote><p>“<strong>astonishingly quick</strong>, and the search […] far more straightforward to use.”</p><footer>— P1</footer></blockquote>
           <blockquote><p>“this tool can <strong>save a lot of time.</strong>”</p><footer>— P5</footer></blockquote>
           <blockquote><p>“could cut my processing <strong>time by at least 50%</strong>”</p><footer>— P8</footer></blockquote>
-          <div class="participant-feedback__limitation"><p>P6 noted that the prototype <strong>did not include the full collection.</strong></p></div>
+          <div class="participant-feedback__limitation"><p>P6’s main critique was that the prototype <strong>did not include the full collection</strong>.</p></div>
         </div>
         </div>
       </div>
