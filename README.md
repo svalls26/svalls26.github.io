@@ -1,11 +1,13 @@
 # Sara Valls — personal website
 
-A one-page personal website built with Jekyll and Minimal Mistakes 4.24.0.
+A personal website with About, Research, and Chess pages, built with Jekyll and Minimal Mistakes 4.24.0.
 
 ## Edit the homepage
 
 - Set your name and site description in `_config.yml`.
 - Edit the short bio in `index.md`.
+- Edit the Research and Chess pages in `research.md` and `chess.md`.
+- Change the navigation order in `_data/navigation.yml`.
 - Replace `assets/images/portrait.jpg` to update the photo.
 - Customize fonts, colours, and spacing in `assets/css/main.scss`.
 
@@ -13,9 +15,11 @@ The portrait is the original supplied photograph; it has not been retouched.
 
 ## Chess replay
 
-The "immortal game" section embeds a standalone replay from `assets/chess/immortal-game.html`. The original PGN was exported from the [Chess.com game](https://www.chess.com/events/2018-spanish-championship-u18/02/Garcia_Sancho_Josep-Valls_Navarro_Sara), Garcia Sancho–Valls Navarro, round 2 of the 2018 Spanish Under-18 Championship (0–1).
+The Chess page embeds a standalone replay from `assets/chess/immortal-game.html`. The original PGN was exported from the [Chess.com game](https://www.chess.com/events/2018-spanish-championship-u18/02/Garcia_Sancho_Josep-Valls_Navarro_Sara), Garcia Sancho–Valls Navarro, round 2 of the 2018 Spanish Under-18 Championship (0–1).
 
 The viewer supports individual moves, first/last positions, autoplay, keyboard navigation, and board flipping. The frame resizes to its content on desktop and mobile. All replay assets are hosted locally; the board does not depend on an external iframe service.
+
+The classical Cburnett SVG pieces are by Colin M. L. Burnett and contributors, used under the author's BSD license. Source details and the complete notice are in `assets/images/chess/classic/LICENSE.txt`. The pieces are unmodified; the board and surrounding layout are site styling.
 
 Move parsing and legal positions use vendored chess.js 1.4.0 from the npm registry, with package integrity verified at download. Its upstream license is preserved in `assets/js/vendor/chess.LICENSE`.
 

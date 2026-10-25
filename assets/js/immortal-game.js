@@ -6,7 +6,6 @@ const moveList = document.getElementById("move-list");
 const status = document.getElementById("position-status");
 const playButton = document.getElementById("play");
 const controls = Object.fromEntries(["first", "previous", "next", "last", "flip"].map(id => [id, document.getElementById(id)]));
-const pieces = { k: "♚", q: "♛", r: "♜", b: "♝", n: "♞", p: "♟" };
 const names = { k: "king", q: "queen", r: "rook", b: "bishop", n: "knight", p: "pawn" };
 let lastHeight = 0;
 
@@ -78,9 +77,13 @@ async function start() {
         cell.dataset.square = square;
         if (lastMove && (square === lastMove.from || square === lastMove.to)) cell.classList.add("last-move");
         if (piece) {
-          const glyph = document.createElement("span");
+          const glyph = document.createElement("img");
           glyph.className = "piece " + (piece.color === "w" ? "white" : "black");
-          glyph.textContent = pieces[piece.type];
+          glyph.src = new URL(`../images/chess/classic/${piece.color}${piece.type.toUpperCase()}.svg`, import.meta.url).href;
+          glyph.alt = "";
+          glyph.draggable = false;
+          glyph.width = 45;
+          glyph.height = 45;
           cell.append(glyph);
           const label = `${piece.color === "w" ? "White" : "Black"} ${names[piece.type]} on ${square}`;
           cell.title = label;
@@ -124,7 +127,6 @@ async function start() {
     controls.last.disabled = controls.next.disabled = ply === moves.length;
     status.textContent = ply === 0 ? "Starting position" : `${Math.ceil(ply / 2)}${ply % 2 ? "." : "..."} ${lastMove.san} · ${ply} / ${moves.length}`;
     if (ply === moves.length) status.textContent += " · Sara wins, 0–1";
-    document.querySelector(".keyboard-hint").textContent = "Use the arrows to replay, or choose a move. " + (orientation === "b" ? "Sara’s side is at the bottom." : "White’s side is at the bottom.");
   }
 
   function goTo(next) {
