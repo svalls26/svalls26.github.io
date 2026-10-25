@@ -15,7 +15,7 @@
         {% for entry in column.entries %}
         <li class="timeline__item">
           <h4>{{ entry.title }}</h4>
-          <div class="timeline__organisation{% if entry.show_name %} timeline__organisation--with-name{% endif %}">
+          <div class="timeline__organisation{% if entry.show_name %} timeline__organisation--with-name{% endif %}{% if entry.logo_style %} timeline__organisation--{{ entry.logo_style }}{% endif %}">
             {% if entry.logo %}<span class="timeline__logo-slot"><img class="timeline__logo" src="{{ entry.logo | relative_url }}" alt="{% unless entry.show_name %}{{ entry.organisation | escape }}{% endunless %}" width="132" height="34" loading="lazy"></span>{% endif %}
             {% if entry.show_name %}<span class="timeline__organisation-name">{{ entry.organisation }}</span>{% endif %}
           </div>

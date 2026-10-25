@@ -28,6 +28,7 @@
     - title: Data Engineer
       organisation: Token Flow
       logo: /assets/images/institutions/token-flow-transparent.png
+      logo_style: token-flow
       show_name: true
       url: https://tokenflow.live/
       period: Apr 2023 – Sep 2025
@@ -35,6 +36,7 @@
     - title: Data Engineer
       organisation: Philip Morris International
       logo: /assets/images/institutions/philip-morris.svg
+      logo_style: pmi
       url: https://www.pmi.com/
       period: Sep 2022 – Apr 2023
       location: Madrid, Spain

@@ -22,6 +22,12 @@ The desktop timelines share entry rows across both columns. Each entry keeps its
 
 As visitors scroll through Background, a purple line grows along each timeline and the entries fade gently into view. Revealed entries stay visible when scrolling back up. With reduced motion enabled or JavaScript unavailable, the full background is shown immediately.
 
+## Research page
+
+The Research page presents the MPhil thesis in five sections, with a sticky contents menu on the left on desktop and an in-flow menu on smaller screens. The current section is highlighted as the reader scrolls. The full thesis is linked at the top; the section summaries are drawn from the supplied dissertation. `assets/js/research.js` enhances the standard section links, which also work without JavaScript.
+
+The opening photograph is hosted locally and credited to Cambridge University Library via Google Arts & Culture. See `assets/images/research/SOURCES.md` for its source and attribution. The opening quotation follows the wording supplied by Sara and used in her dissertation.
+
 ## Chess replay
 
 The Chess page embeds a standalone replay from `assets/chess/immortal-game.html`. The original PGN was exported from the [Chess.com game](https://www.chess.com/events/2018-spanish-championship-u18/02/Garcia_Sancho_Josep-Valls_Navarro_Sara), Garcia Sancho–Valls Navarro, round 2 of the 2018 Spanish Under-18 Championship (0–1).
