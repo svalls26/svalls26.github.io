@@ -3,9 +3,13 @@
     <h2 id="background-heading" class="bio__eyebrow">Background</h2>
     <a class="background__cv" href="https://drive.google.com/file/d/1ana20jevJUCO8VyqcAd9yk-HIaMBbmwR/view?usp=sharing">Link to CV</a>
   </div>
-  <div class="background__grid">
+  {% assign background_max_entries = 0 %}
+  {% for column in site.data.background %}
+    {% if column.entries.size > background_max_entries %}{% assign background_max_entries = column.entries.size %}{% endif %}
+  {% endfor %}
+  <div class="background__grid" style="--background-rows: {{ background_max_entries | times: 5 | plus: 1 }};">
     {% for column in site.data.background %}
-    <section class="background__column" aria-labelledby="{{ column.id }}-heading">
+    <section class="background__column" style="--timeline-column: {{ forloop.index }}; --timeline-rows: {{ column.entries.size | times: 5 }};" aria-labelledby="{{ column.id }}-heading">
       <h3 id="{{ column.id }}-heading">{{ column.heading }}</h3>
       <ol class="timeline">
         {% for entry in column.entries %}

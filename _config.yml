@@ -11,6 +11,9 @@ minimal_mistakes_skin: contrast
 search: false
 breadcrumbs: false
 
+after_footer_scripts:
+  - /assets/js/site.js
+
 author:
   name: "Sara Valls Navarro"
   location: "Cambridge, United Kingdom"

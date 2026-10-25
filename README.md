@@ -16,6 +16,8 @@ The portrait is the original supplied photograph; it has not been retouched.
 
 The background section uses two vertical timelines on desktop and stacks them on phones. Dates and roles are taken from the supplied CV; the Cambridge Research Assistant role is marked as upcoming. Organisation logos are not links and retain accessible names through image alt text or the adjacent visible name. Only Token Flow also displays a separate name. Logo sources are recorded in `assets/images/institutions/SOURCES.md`; SVGs retain their original artwork, and the Token Flow PNG has its dark background removed.
 
+The desktop timelines share row sizing to align roles, logos, and dates across both columns. Automatic heading permalinks are removed by `assets/js/site.js`, loaded after the theme script.
+
 ## Chess replay
 
 The Chess page embeds a standalone replay from `assets/chess/immortal-game.html`. The original PGN was exported from the [Chess.com game](https://www.chess.com/events/2018-spanish-championship-u18/02/Garcia_Sancho_Josep-Valls_Navarro_Sara), Garcia Sancho–Valls Navarro, round 2 of the 2018 Spanish Under-18 Championship (0–1).
