@@ -2,6 +2,7 @@
 title: null
 description: "Sara Valls — MPhil in Machine Learning and Machine Intelligence at Cambridge, interested in human-centred AI and seeking PhD opportunities."
 permalink: /
+author_profile: true
 classes:
   - wide
   - homepage

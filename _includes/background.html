@@ -7,9 +7,9 @@
   {% for column in site.data.background %}
     {% if column.entries.size > background_max_entries %}{% assign background_max_entries = column.entries.size %}{% endif %}
   {% endfor %}
-  <div class="background__grid" style="--background-rows: {{ background_max_entries | times: 5 | plus: 1 }};">
+  <div class="background__grid" style="--background-rows: {{ background_max_entries | plus: 1 }};">
     {% for column in site.data.background %}
-    <section class="background__column" style="--timeline-column: {{ forloop.index }}; --timeline-rows: {{ column.entries.size | times: 5 }};" aria-labelledby="{{ column.id }}-heading">
+    <section class="background__column" style="--timeline-column: {{ forloop.index }}; --timeline-rows: {{ column.entries.size }};" aria-labelledby="{{ column.id }}-heading">
       <h3 id="{{ column.id }}-heading">{{ column.heading }}</h3>
       <ol class="timeline">
         {% for entry in column.entries %}

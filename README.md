@@ -14,9 +14,13 @@ A personal website with About, Research, and Chess pages, built with Jekyll and 
 
 The portrait is the original supplied photograph; it has not been retouched.
 
+The author profile (portrait, full name, tagline, and contact details) appears only on About. Research and Chess use a centred reading column; all pages keep the site name and navigation in the header.
+
 The background section uses two vertical timelines on desktop and stacks them on phones. Dates and roles are taken from the supplied CV; the Cambridge Research Assistant role is marked as upcoming. Organisation logos are not links and retain accessible names through image alt text or the adjacent visible name. Only Token Flow also displays a separate name. Logo sources are recorded in `assets/images/institutions/SOURCES.md`; SVGs retain their original artwork, and the Token Flow PNG has its dark background removed.
 
-The desktop timelines share row sizing to align roles, logos, and dates across both columns. Automatic heading permalinks are removed by `assets/js/site.js`, loaded after the theme script.
+The desktop timelines share entry rows across both columns. Each entry keeps its title, logo, and dates together with consistent spacing, including when a title wraps. Automatic heading permalinks are removed by `assets/js/site.js`, loaded after the theme script.
+
+As visitors scroll through Background, a purple line grows along each timeline and the entries fade gently into view. Revealed entries stay visible when scrolling back up. With reduced motion enabled or JavaScript unavailable, the full background is shown immediately.
 
 ## Chess replay
 
