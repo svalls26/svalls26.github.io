@@ -42,6 +42,6 @@
     });
   });
 
-  // Without JavaScript, all four explanations remain available in the page.
+  // Without JavaScript, all three explanations remain available in the page.
   selectCue(buttons[0], false);
 })();

@@ -838,8 +838,7 @@ body {
 }
 
 .cue-level.is-active .cue-level__number { border-color: $link-color; background: $link-color; color: #fff; }
-.cue-level--metadata { left: 0; top: 12%; }
-.cue-level--macro { left: 0; top: 60%; }
+.cue-level--macro { left: 0; top: 35%; }
 .cue-level--textual { right: 0; top: 20%; }
 .cue-level--micro { right: 0; top: 71%; }
 

@@ -1,13 +1,12 @@
 {% include join-process.html %}
 
-<div class="cue-explorer" data-cue-explorer data-active-cue="metadata">
+<div class="cue-explorer" data-cue-explorer data-active-cue="macro">
   <h3>What do scholars look for?</h3>
   <p class="cue-explorer__intro">Explore the expert’s workflow. Select a numbered point to see the cues used at each level.</p>
 
   <div class="cue-explorer__canvas">
     <svg class="cue-connections" viewBox="0 0 640 450" preserveAspectRatio="none" aria-hidden="true">
-      <g data-cue-connection="metadata" class="is-active"><path d="M94 88 H136 L174 111"/><circle cx="174" cy="111" r="4"/></g>
-      <g data-cue-connection="macro"><path d="M94 301 H140 L223 252"/><circle cx="223" cy="252" r="4"/></g>
+      <g data-cue-connection="macro" class="is-active"><path d="M94 190 H140 L223 252"/><circle cx="223" cy="252" r="4"/></g>
       <g data-cue-connection="textual"><path d="M546 125 H510 L458 153"/><circle cx="458" cy="153" r="4"/></g>
       <g data-cue-connection="micro"><path d="M546 354 H511 L426 292"/><circle cx="426" cy="292" r="4"/></g>
     </svg>
@@ -15,39 +14,33 @@
     <div class="cue-manuscript">
       <img src="{{ '/assets/images/research/join-set-example.png' | relative_url }}" alt="T-S A8.3, a manuscript fragment with three columns of Hebrew writing, from Cambridge University Library." width="4637" height="1800" loading="lazy">
       <svg class="cue-manuscript__annotations" viewBox="0 0 1700 1800" aria-hidden="true">
-        <g data-cue-overlay="metadata">
+        <g data-cue-overlay="macro">
           <rect x="275" y="260" width="360" height="1270" rx="12"/>
           <rect x="720" y="260" width="360" height="1270" rx="12"/>
           <rect x="1155" y="260" width="360" height="1270" rx="12"/>
+          <path d="M285 660 H625 M285 715 H625 M285 770 H625"/>
         </g>
-        <g data-cue-overlay="macro" hidden><rect x="275" y="625" width="360" height="190" rx="10"/><path d="M285 660 H625 M285 715 H625 M285 770 H625"/></g>
         <g data-cue-overlay="textual" hidden><rect x="1120" y="390" width="400" height="300" rx="12"/></g>
         <g data-cue-overlay="micro" hidden><rect x="1075" y="1080" width="280" height="180" rx="12"/></g>
       </svg>
     </div>
 
-    <div class="cue-explorer__controls" role="group" aria-label="Four levels of scholarly evidence">
-      <button type="button" id="cue-button-metadata" class="cue-level cue-level--metadata is-active" data-cue="metadata" aria-pressed="true" aria-controls="cue-panel-metadata"><span class="cue-level__number">1</span><span>Metadata</span></button>
-      <button type="button" id="cue-button-macro" class="cue-level cue-level--macro" data-cue="macro" aria-pressed="false" aria-controls="cue-panel-macro"><span class="cue-level__number">2</span><span>Macro layer</span></button>
-      <button type="button" id="cue-button-textual" class="cue-level cue-level--textual" data-cue="textual" aria-pressed="false" aria-controls="cue-panel-textual"><span class="cue-level__number">3</span><span>Textual apparatus</span></button>
-      <button type="button" id="cue-button-micro" class="cue-level cue-level--micro" data-cue="micro" aria-pressed="false" aria-controls="cue-panel-micro"><span class="cue-level__number">4</span><span>Micro layer</span></button>
+    <div class="cue-explorer__controls" role="group" aria-label="Three levels of visual cues">
+      <button type="button" id="cue-button-macro" class="cue-level cue-level--macro is-active" data-cue="macro" aria-pressed="true" aria-controls="cue-panel-macro"><span class="cue-level__number">1</span><span>Macro layer</span></button>
+      <button type="button" id="cue-button-textual" class="cue-level cue-level--textual" data-cue="textual" aria-pressed="false" aria-controls="cue-panel-textual"><span class="cue-level__number">2</span><span>Textual apparatus</span></button>
+      <button type="button" id="cue-button-micro" class="cue-level cue-level--micro" data-cue="micro" aria-pressed="false" aria-controls="cue-panel-micro"><span class="cue-level__number">3</span><span>Micro layer</span></button>
     </div>
   </div>
   <p class="cue-explorer__credit">Central fragment: T-S A8.3 · Cambridge University Library.</p>
 
   <div class="cue-explorer__details">
-    <section id="cue-panel-metadata" class="cue-panel" data-cue-panel="metadata" aria-labelledby="cue-button-metadata">
-      <h4><span>01</span> Metadata</h4>
-      <p>Begin with the physical description of the fragment. The highlighted columns show one of the features scholars check before comparing the handwriting.</p>
-      <ul class="cue-list"><li>Material</li><li>Number of columns</li><li>Number of lines</li></ul>
-    </section>
     <section id="cue-panel-macro" class="cue-panel" data-cue-panel="macro" aria-labelledby="cue-button-macro">
-      <h4><span>02</span> Macro layer</h4>
-      <p>Look at the overall page: its layout, ruling and spacing. Colour can vary with damage and photography, so similar colour alone does not establish a join.</p>
-      <ul class="cue-list"><li>Background colour</li><li>Ink colour</li><li>Ruling type</li><li>Column width</li><li>Line spacing</li></ul>
+      <h4><span>01</span> Macro layer</h4>
+      <p>Look at the overall page: its columns, layout, ruling and spacing. Ink colour can vary with damage and photography, so this similarity alone does not establish a join.</p>
+      <ul class="cue-list"><li>Background colour</li><li>Ink colour</li><li>Ruling type</li><li>Number of columns</li><li>Column width</li><li>Line spacing</li></ul>
     </section>
     <section id="cue-panel-textual" class="cue-panel" data-cue-panel="textual" aria-labelledby="cue-button-textual">
-      <h4><span>03</span> Textual apparatus</h4>
+      <h4><span>02</span> Textual apparatus</h4>
       <p>Inspect the marks and notes around the main text. These can guide comparison, but some may have been added later by another hand.</p>
       <ul class="cue-list"><li>Vocalisation</li><li>Masoretic notes</li><li><em>Sedarim</em> markers</li></ul>
       <div class="cue-examples">
@@ -57,7 +50,7 @@
       <p class="cue-panel__takeaway">These fragments belong to the same codex despite their different marker styles: one cue is not enough on its own.</p>
     </section>
     <section id="cue-panel-micro" class="cue-panel" data-cue-panel="micro" aria-labelledby="cue-button-micro">
-      <h4><span>04</span> Micro layer</h4>
+      <h4><span>03</span> Micro layer</h4>
       <p>Compare individual letter forms: the shape, angle and proportions of the strokes. This close inspection supports the scholar’s palaeographic judgement.</p>
       <ul class="cue-list"><li>Letter forms</li></ul>
       <div class="cue-examples cue-examples--letters">
