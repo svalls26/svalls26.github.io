@@ -578,13 +578,10 @@ body {
 }
 
 .genizah-intro {
-  display: grid;
-  grid-template-columns: 38% minmax(0, 1fr);
-  align-items: start;
-  gap: 1.3rem;
-
   .genizah-intro__portrait {
-    margin: 0.2rem 0 0;
+    width: 85%;
+    max-width: 520px;
+    margin: 0 auto 1.5rem;
 
     img { border-radius: 3px; }
     figcaption { font-size: 0.65rem; line-height: 1.4; }
@@ -604,31 +601,34 @@ body {
   .genidaat-feature__text .genidaat-image-hint { color: $muted-text-color; font-size: 0.7rem; }
 }
 
-.genidaat-feature, .genidaat-comparison, .genidaat-evaluation {
+.genidaat-feature--reverse { grid-template-columns: 1fr 1.5fr; }
+
+.genidaat-feature, .genidaat-evaluation {
   h3 { margin: 0 0 0.8rem; font-size: 1.2rem; font-weight: 500; }
   .research-figure a { display: block; border-radius: 5px; }
   .research-figure a:focus-visible { outline: 2px solid $link-color; outline-offset: 5px; }
   .research-figure img { border: 1px solid #ded8d0; border-radius: 5px; }
 }
 
-.genidaat-comparison { margin: 2.5rem 0; }
 .genidaat-evaluation { padding-top: 1.8rem; border-top: 1px solid #e6e2e9; }
-.genidaat-sus { max-width: 480px; padding: 0.7rem; margin: 1.5rem auto 2rem; background: #fff; border: 1px solid #e6e2e9; }
+.genidaat-study { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: start; gap: 1.4rem; margin: 1.5rem 0 2rem; }
+.genidaat-sus { min-width: 0; margin: 0; }
 .genidaat-evaluation .genidaat-sus img { border: 0; border-radius: 0; }
 .participant-feedback {
   display: grid;
   gap: 1rem;
-  margin: 1.5rem 0;
+  margin: 0;
 
-  blockquote { padding: 0.1rem 0 0.1rem 1rem; margin: 0; border-left: 2px solid #bba9ca; font-style: normal; }
-  p { margin: 0 0 0.3rem; font-family: $serif; font-size: 1rem; line-height: 1.5; font-style: italic; }
-  footer { color: $muted-text-color; font-size: 0.75rem; }
+  blockquote, .participant-feedback__limitation { padding: 0.1rem 0 0.1rem 0.8rem; margin: 0; border-left: 2px solid #bba9ca; font-style: normal; }
+  p { margin: 0 0 0.3rem; font-family: $serif; font-size: 0.85rem; line-height: 1.5; font-style: italic; }
+  footer { color: $muted-text-color; font-size: 0.7rem; }
+  .participant-feedback__limitation p { font-family: $sans-serif; font-size: 0.8rem; font-style: normal; }
 }
-.genidaat-study-note { color: $muted-text-color; font-size: 0.8rem; }
 
 @media (max-width: 600px) {
-  .genizah-intro { display: block; }
-  .genizah-intro .genizah-intro__portrait { width: 58%; max-width: 230px; margin: 0 auto 1.3rem; }
+  .genizah-intro .genizah-intro__portrait { width: 100%; }
+  .genidaat-study { grid-template-columns: 1fr; gap: 1.5rem; }
+  .genidaat-sus { max-width: 480px; margin-inline: auto; }
   .genidaat-feature { grid-template-columns: 1fr; gap: 1rem; }
 }
 
@@ -802,8 +802,6 @@ body {
   text { fill: $link-color; text-anchor: middle; font-weight: 500; }
 }
 .retrieval-figure__pan-hint { display: none; }
-.research-section .retrieval-results-title { margin: 2rem 0 0.8rem; font-size: 1.25rem; font-weight: 500; }
-.retrieval-results-figure__plot { padding: 0.8rem; border: 1px solid #e6e2e9; background: #fff; }
 .retrieval-chapter-link { font-size: 0.85rem; }
 
 .page__content .join-stages {
@@ -833,8 +831,9 @@ body {
 }
 
 .join-process__dots { fill: #806e93; }
-.join-process__path--match { stroke: #4f8069; }
-.join-process__dot--match { fill: #4f8069; }
+.join-process__path--match { fill: none; stroke: #4f8069; stroke-width: 4.5; opacity: 0; }
+.join-process__dot--match { fill: #4f8069; opacity: 0; }
+.join-match-head--discovery, .join-match-head--confirmation { fill: #4f8069; opacity: 0; }
 
 .join-process__caption {
   fill: $muted-text-color;
@@ -854,23 +853,24 @@ body {
   }
 }
 
-// Research reveals are opt-in: every diagram is complete without JavaScript.
+// Purple base paths stay visible; scroll progress draws a green overlay.
 .research-reveals {
   .join-process__path--match {
-    opacity: 0;
+    opacity: 1;
     stroke-dasharray: 100 100;
-    stroke-dashoffset: 100;
-    transition: stroke-dashoffset 850ms ease, opacity 250ms ease;
+    stroke-dashoffset: calc(100 * (1 - var(--join-progress, 0)));
   }
-  .join-process__dot--match { opacity: 0; transition: opacity 350ms ease; }
-  .is-discovery-revealed .join-match--discovery,
-  .is-confirmation-revealed .join-match--confirmation { opacity: 1; stroke-dashoffset: 0; }
+  .join-match--discovery { --join-progress: var(--discovery-progress, 0); }
+  .join-match--confirmation { --join-progress: var(--confirmation-progress, 0); }
+  .join-process__dot--match { opacity: clamp(0, calc(var(--join-progress, 0) * 5), 1); }
+  .join-match-head--discovery { opacity: var(--discovery-head, 0); }
+  .join-match-head--confirmation { opacity: var(--confirmation-head, 0); }
 
   .cue-level, .cue-connections g, [data-cue-overlay="macro"] > g {
     opacity: 0;
-    transition: opacity 550ms ease;
+    transition: opacity 400ms ease;
   }
-  .cue-level { transform: translateY(8px); transition: opacity 450ms ease, transform 450ms ease; }
+  .cue-level { transform: translateY(8px); transition: opacity 400ms ease, transform 400ms ease; }
   .is-macro-revealed .cue-level--macro,
   .is-textual-revealed .cue-level--textual,
   .is-micro-revealed .cue-level--micro { opacity: 1; transform: none; }
@@ -885,10 +885,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .research-reveals {
-    .join-process__path--match, .join-process__dot--match,
-    .cue-level, .cue-connections g, [data-cue-overlay="macro"] > g {
-      opacity: 1; stroke-dashoffset: 0; transform: none; transition: none;
-    }
+    .cue-level, .cue-connections g, [data-cue-overlay="macro"] > g { transform: none; transition: none; }
   }
 }
 

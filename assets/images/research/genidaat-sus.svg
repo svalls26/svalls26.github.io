@@ -267,9 +267,7 @@
 </clipPath>
 </defs>
 <g clip-path="url(#clip-0)">
-<path fill-rule="nonzero" fill="rgb(100%, 100%, 100%)" fill-opacity="1" d="M 0.261719 191.292969 L 233.699219 191.292969 L 233.699219 0 L 0.261719 0 Z M 0.261719 191.292969 "/>
 </g>
-<path fill-rule="nonzero" fill="rgb(100%, 100%, 100%)" fill-opacity="1" d="M 31.640625 139.089844 L 232.265625 139.089844 L 232.265625 3.929688 L 31.640625 3.929688 Z M 31.640625 139.089844 "/>
 <path fill="none" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 44.659711 52.433958 L 44.659711 48.934054 " transform="matrix(0.995563, 0, 0, -0.995563, 0.261095, 191.291158)"/>
 <g fill="rgb(0%, 0%, 0%)" fill-opacity="1">
 <use xlink:href="#glyph-0-0" x="40.46151" y="151.051718"/>
@@ -561,7 +559,6 @@
 <use xlink:href="#glyph-4-12" x="212.965029" y="185.837961"/>
 <use xlink:href="#glyph-4-13" x="214.401627" y="185.837961"/>
 </g>
-<path fill-rule="nonzero" fill="rgb(100%, 100%, 100%)" fill-opacity="0.85" d="M 58.117188 33.960938 L 74.945312 33.960938 L 74.945312 21.675781 L 58.117188 21.675781 Z M 58.117188 33.960938 "/>
 <g fill="rgb(35.293579%, 35.293579%, 35.293579%)" fill-opacity="1">
 <use xlink:href="#glyph-5-0" x="59.048797" y="26.551562"/>
 <use xlink:href="#glyph-5-1" x="64.024621" y="26.551562"/>
