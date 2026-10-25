@@ -57,15 +57,14 @@ classes:
     <section id="retrieving-candidate-joins" class="research-section" aria-labelledby="retrieving-candidate-joins-heading">
       <h2 id="retrieving-candidate-joins-heading">Retrieving Candidate Joins</h2>
       {% include retrieval-pipeline.html %}
-      <p>Because no dataset or benchmark was available for this task, I curated <strong>10,153 fragments in 3,593 expert-labelled join groups</strong> from publicly available sources, with 24,057 images across six collections. To suggest potential joins, the pipeline matches handwriting by visual similarity. Images are first preprocessed to locate lines and ink, exclude photographic backgrounds, and extract overlapping patches of handwriting. A frozen <a href="https://ai.meta.com/research/dinov3/">DINOv3</a> ViT-L/16 vision foundation model encodes each patch. Foreground features from all images of a fragment are pooled and encoded with VLAD into a single descriptor; cosine similarity between these descriptors produces the ranked candidates.</p>
-      <p>The pipeline achieves <strong>65.0% Recall@100</strong> on the test set.</p>
+      <p>Because no dataset or benchmark was available for this task, I curated <strong>10,153 fragments in 3,593 expert-labelled join groups</strong> from publicly available sources, with 24,057 images across six collections. To suggest potential joins, the pipeline matches handwriting by visual similarity. Images are first preprocessed to locate lines and ink, exclude photographic backgrounds, and extract overlapping patches of handwriting. A frozen <a href="https://ai.meta.com/research/dinov3/">DINOv3</a> ViT-L/16 model encodes each patch. Foreground features from all images of a fragment are pooled and encoded with VLAD into a single descriptor; cosine similarity between these descriptors produces the ranked candidates. The pipeline achieves <strong>65.0% Recall@100</strong> on the test set.</p>
       <p class="retrieval-chapter-link">See <a href="https://drive.google.com/file/d/1f63JcBByUEnj4Q4bZbJxVZQWwxJD1nya/view?usp=sharing">Chapter 5 of the dissertation</a> for the dataset, experimental setup, baseline comparisons and complete results.</p>
     </section>
 
     <section id="genidaat" class="research-section" aria-labelledby="genidaat-heading">
       <h2 id="genidaat-heading">Genida’at: An Interface for Join Discovery</h2>
-      <p>Genida’at takes its name from the Hebrew words <em>genizah</em>, “repository”, and <em>da’at</em>, “knowledge”. The retrieval pipeline is integrated into a visual interface designed around scholars’ daily workflows, bringing discovery and confirmation into a single environment.</p>
-      <p>Even a highly accurate model can produce a ranked list spanning thousands of candidates. Making those results efficient to review is essential. Grounded in HCI research and the formative study, the interface lets scholars explore suggestions, compare fragments and record their judgements through intuitive controls, without needing technical expertise.</p>
+      <p><strong>Genida’at</strong> takes its name from the Hebrew words <strong>genizah</strong>, “repository”, and <strong>da’at</strong>, “knowledge”. The retrieval pipeline is integrated into a visual interface designed around scholars’ daily workflows, bringing discovery and confirmation into a single environment.</p>
+      <p>Even a highly accurate model can produce a ranked list spanning thousands of candidates. Making those results efficient to review is essential. Grounded in the formative study findings and HCI research, the interface lets scholars explore suggestions, compare fragments and record their judgements through intuitive controls, without needing technical expertise.</p>
       <p><a class="genidaat-prototype-link" href="https://sv533-beta.iis-lab.space/">Explore the Genida’at prototype <span aria-hidden="true">↗</span></a></p>
 
       <div class="genidaat-feature">
@@ -75,7 +74,6 @@ classes:
         <div class="genidaat-feature__text">
           <h3>Review at a glance</h3>
           <p>A ranked grid keeps the anchor in view while scholars scan potential joins and record an initial judgement. Promising candidates can then be opened for closer inspection.</p>
-          <p class="genidaat-image-hint">Select the image to view it at full size.</p>
         </div>
       </div>
 

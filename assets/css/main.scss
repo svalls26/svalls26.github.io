@@ -598,7 +598,6 @@ body {
 
   .genidaat-feature__image { margin: 0; }
   .genidaat-feature__text p { margin-bottom: 0.8rem; font-size: 0.85rem; line-height: 1.55; }
-  .genidaat-feature__text .genidaat-image-hint { color: $muted-text-color; font-size: 0.7rem; }
 }
 
 .genidaat-feature--reverse { grid-template-columns: 1fr 1.5fr; }
@@ -991,6 +990,22 @@ body {
 }
 
 .cue-explorer:not([data-active-cue="macro"]) .macro-cue-key { display: none; }
+
+.macro-cue-key.macro-key-reveals {
+  > li { opacity: 0; transform: translateY(6px); }
+  > li.is-visible { opacity: 1; transform: none; transition: opacity 400ms ease, transform 400ms ease; }
+  > li.is-visible:nth-child(2) { transition-delay: 80ms; }
+  > li.is-visible:nth-child(3) { transition-delay: 160ms; }
+  > li.is-visible:nth-child(4) { transition-delay: 240ms; }
+  > li.is-visible:nth-child(5) { transition-delay: 320ms; }
+  > li.is-visible:nth-child(6) { transition-delay: 400ms; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .macro-cue-key.macro-key-reveals > li,
+  .macro-cue-key.macro-key-reveals > li.is-visible { opacity: 1; transform: none; transition: none; }
+}
+
 
 .cue-level {
   position: absolute;

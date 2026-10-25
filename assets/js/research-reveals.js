@@ -9,6 +9,8 @@
   const mobileScenes = process.querySelectorAll('.join-process__mobile');
   const cues = ['macro', 'textual', 'micro'];
   const guides = ['columns', 'ruling', 'width', 'spacing'];
+  const macroKey = canvas.parentElement.querySelector('.macro-cue-key');
+  const keyItems = macroKey ? Array.from(macroKey.querySelectorAll('[data-reveal-with]')) : [];
   const feedback = document.querySelector('.participant-feedback');
   const comments = feedback ? Array.from(feedback.children) : [];
   const stages = ['discovery', 'confirmation'].map(name => ({ name, start: 0, duration: 1, progress: 0 }));
@@ -37,6 +39,15 @@
       .concat(cues.map((name, index) => ({ name, start: cueStart + manuscript.height * index * 0.18 })));
   }
 
+  function updateMacroKey() {
+    const macroReady = canvas.classList.contains('is-macro-revealed');
+    keyItems.forEach(item => {
+      const guideReady = canvas.classList.contains(`is-${item.dataset.revealWith}-revealed`);
+      const inReadingArea = item.getBoundingClientRect().top < window.innerHeight * 0.8;
+      if (motion.matches || (macroReady && guideReady && inReadingArea)) item.classList.add('is-visible');
+    });
+  }
+
   function updateFeedback() {
     const readingLine = window.innerHeight * 0.75;
     comments.forEach(comment => {
@@ -59,6 +70,7 @@
     reveals.forEach(reveal => {
       if (window.scrollY > reveal.start) canvas.classList.add(`is-${reveal.name}-revealed`);
     });
+    updateMacroKey();
     updateFeedback();
   }
 
@@ -77,6 +89,7 @@
 
   canvas.addEventListener('focusin', () => {
     cues.concat(guides).forEach(part => canvas.classList.add(`is-${part}-revealed`));
+    updateMacroKey();
   });
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
@@ -86,10 +99,11 @@
     lastY = y;
   }, { passive: true });
   window.addEventListener('resize', () => { if (armed) measure(); });
-  motion.addEventListener('change', () => { updateFeedback(); queueUpdate(); });
+  motion.addEventListener('change', () => { updateMacroKey(); updateFeedback(); queueUpdate(); });
   story.classList.add('research-reveals');
   if (feedback) feedback.classList.add('feedback-reveals');
-  if (motion.matches) updateFeedback();
+  if (macroKey) macroKey.classList.add('macro-key-reveals');
+  if (motion.matches) { updateMacroKey(); updateFeedback(); }
   ['wheel', 'touchmove', 'pointerdown', 'keydown'].forEach(type => {
     window.addEventListener(type, arm, { once: true, passive: true });
   });
