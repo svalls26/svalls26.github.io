@@ -23,7 +23,7 @@ classes:
   <div class="research-story">
     <header class="research-header">
       <h1 id="research-heading" class="bio__eyebrow">Research</h1>
-      <a class="research-thesis-link" href="https://drive.google.com/file/d/1f63JcBByUEnj4Q4bZbJxVZQWwxJD1nya/view?usp=sharing">Read the full Dissertation <span aria-hidden="true">↗</span></a>
+      <a class="research-thesis-link" href="https://drive.google.com/file/d/1f63JcBByUEnj4Q4bZbJxVZQWwxJD1nya/view?usp=sharing">Full dissertation available here <span aria-hidden="true">↗</span></a>
     </header>
 
     <section id="genizah-jigsaw" class="research-section" aria-labelledby="genizah-jigsaw-heading">
