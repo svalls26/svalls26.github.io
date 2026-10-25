@@ -1,0 +1,70 @@
+<figure class="join-process" aria-label="Discovery and confirmation in manuscript join discovery">
+  <svg class="join-process__definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <defs>
+      <image id="join-workflow-source" href="{{ '/assets/images/research/join-discovery-reference.png' | relative_url }}" width="1790" height="734"/>
+      <marker id="join-arrow" markerUnits="userSpaceOnUse" markerWidth="22" markerHeight="18" refX="18" refY="9" orient="auto"><path d="M0 0 L22 9 L0 18Z" fill="#806e93"/></marker>
+      <marker id="join-arrow-match" markerUnits="userSpaceOnUse" markerWidth="22" markerHeight="18" refX="18" refY="9" orient="auto"><path d="M0 0 L22 9 L0 18Z" fill="#4f8069"/></marker>
+
+      <g id="join-review-group">
+        <svg x="444" y="99" width="182" height="178" viewBox="807 182 304 297"><use href="#join-workflow-source"/></svg>
+        <text class="join-process__caption" x="535" y="310">Subset for<tspan x="535" dy="25">review</tspan></text>
+      </g>
+
+      <g id="join-discovery-scene">
+        <svg x="0" y="133" width="115" height="150" viewBox="820 320 113 146"><use href="#join-workflow-source"/></svg>
+        <text class="join-process__caption" x="57" y="315">Anchor</text>
+
+        <svg x="143" y="16" width="62" height="322" viewBox="306 31 101 543"><use href="#join-workflow-source"/></svg>
+        <text class="join-process__caption" x="174" y="367">Full<tspan x="174" dy="25">collection</tspan></text>
+
+        <g class="join-process__paths" marker-end="url(#join-arrow)">
+          <path d="M238 110 C297 110 337 164 410 166"/>
+          <path d="M238 135 C299 135 343 182 410 184"/>
+          <path d="M238 170 C300 170 344 201 410 202"/>
+          <path d="M238 214 C303 214 350 220 410 220"/>
+          <path d="M238 252 C302 252 345 237 410 238"/>
+          <path d="M238 287 C302 287 346 255 410 256"/>
+          <path d="M238 318 C301 318 345 275 410 274"/>
+          <path class="join-process__path--match" d="M238 60 C300 60 337 134 410 148" marker-end="url(#join-arrow-match)"/>
+        </g>
+        <g class="join-process__dots">
+          <circle cx="238" cy="110" r="8"/><circle cx="238" cy="135" r="8"/>
+          <circle cx="238" cy="170" r="8"/><circle cx="238" cy="214" r="8"/>
+          <circle cx="238" cy="252" r="8"/><circle cx="238" cy="287" r="8"/>
+          <circle cx="238" cy="318" r="8"/><circle class="join-process__dot--match" cx="238" cy="60" r="8"/>
+        </g>
+        <g class="join-process__stage"><rect x="238" y="350" width="185" height="51" rx="9"/><text x="330" y="383">Discovery</text></g>
+      </g>
+
+      <g id="join-confirmation-scene">
+        <g class="join-process__paths" marker-end="url(#join-arrow)">
+          <path d="M655 177 H783"/><path d="M655 209 H783"/><path d="M655 241 H783"/>
+          <path class="join-process__path--match" d="M655 145 H783" marker-end="url(#join-arrow-match)"/>
+        </g>
+        <g class="join-process__dots">
+          <circle cx="655" cy="177" r="8"/><circle cx="655" cy="209" r="8"/><circle cx="655" cy="241" r="8"/>
+          <circle class="join-process__dot--match" cx="655" cy="145" r="8"/>
+        </g>
+        <svg x="818" y="133" width="178" height="130" viewBox="954 360 144 106"><use href="#join-workflow-source"/></svg>
+        <text class="join-process__caption" x="907" y="311">Confirmed join</text>
+        <g class="join-process__stage"><rect x="642" y="350" width="160" height="51" rx="9"/><text x="722" y="383">Confirmation</text></g>
+      </g>
+    </defs>
+  </svg>
+
+  <svg class="join-process__desktop" viewBox="0 0 1000 420" role="img" aria-labelledby="join-process-title join-process-description">
+    <title id="join-process-title">From the full collection to a confirmed join</title>
+    <desc id="join-process-description">Starting with an anchor fragment and the full collection, discovery narrows many possibilities to a subset for review. Scholars then examine the candidates during confirmation to identify a join. A green path follows the matching candidate through both stages.</desc>
+    <use href="#join-discovery-scene"/><use href="#join-review-group"/><use href="#join-confirmation-scene"/>
+  </svg>
+  <svg class="join-process__mobile" viewBox="0 0 635 420" role="img" aria-labelledby="join-discovery-title join-discovery-description">
+    <title id="join-discovery-title">Discovery</title>
+    <desc id="join-discovery-description">An anchor fragment and the full collection lead through many candidate paths to a smaller subset for review.</desc>
+    <use href="#join-discovery-scene"/><use href="#join-review-group"/>
+  </svg>
+  <svg class="join-process__mobile" viewBox="430 90 570 330" role="img" aria-labelledby="join-confirmation-title join-confirmation-description">
+    <title id="join-confirmation-title">Confirmation</title>
+    <desc id="join-confirmation-description">Scholars inspect the subset for review to identify a confirmed join. The green path represents the matching candidate.</desc>
+    <use href="#join-review-group"/><use href="#join-confirmation-scene"/>
+  </svg>
+</figure>
