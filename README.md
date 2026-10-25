@@ -32,6 +32,8 @@ The Join Problem includes a two-stage workflow illustration in `_includes/join-p
 
 The opening photograph is hosted locally and credited to Cambridge University Library via Google Arts & Culture. See `assets/images/research/SOURCES.md` for its source and attribution. The introductory paragraph follows the wording supplied by Sara.
 
+The macro layer overlays column outlines, dashed ruling guides, a column-width bracket and line-spacing marks. A matching key and text explanation identify these schematic guides; they appear only while the macro layer is selected.
+
 ## Chess replay
 
 The Chess page embeds a standalone replay from `assets/chess/immortal-game.html`. The original PGN was exported from the [Chess.com game](https://www.chess.com/events/2018-spanish-championship-u18/02/Garcia_Sancho_Josep-Valls_Navarro_Sara), Garcia Sancho–Valls Navarro, round 2 of the 2018 Spanish Under-18 Championship (0–1).

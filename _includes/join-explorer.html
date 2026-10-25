@@ -15,10 +15,14 @@
       <img src="{{ '/assets/images/research/join-set-example.png' | relative_url }}" alt="T-S A8.3, a manuscript fragment with three columns of Hebrew writing, from Cambridge University Library." width="4637" height="1800" loading="lazy">
       <svg class="cue-manuscript__annotations" viewBox="0 0 1700 1800" aria-hidden="true">
         <g data-cue-overlay="macro">
-          <rect x="275" y="260" width="360" height="1270" rx="12"/>
-          <rect x="720" y="260" width="360" height="1270" rx="12"/>
-          <rect x="1155" y="260" width="360" height="1270" rx="12"/>
-          <path d="M285 660 H625 M285 715 H625 M285 770 H625"/>
+          <g class="macro-guide--columns">
+            <rect x="195" y="250" width="365" height="1280" rx="10"/>
+            <rect x="615" y="250" width="365" height="1280" rx="10"/>
+            <rect x="1040" y="250" width="380" height="1280" rx="10"/>
+          </g>
+          <g class="macro-guide--ruling"><path d="M205 660 H550 M205 715 H550 M205 770 H550"/></g>
+          <g class="macro-guide--width"><path d="M615 185 H980 M615 165 V205 M980 165 V205"/></g>
+          <g class="macro-guide--spacing"><path d="M585 660 V770 M570 660 H600 M570 715 H600 M570 770 H600"/></g>
         </g>
         <g data-cue-overlay="textual" hidden><rect x="1120" y="390" width="400" height="300" rx="12"/></g>
         <g data-cue-overlay="micro" hidden><rect x="1200" y="1015" width="60" height="65" rx="5"/></g>
@@ -31,12 +35,19 @@
       <button type="button" id="cue-button-micro" class="cue-level cue-level--micro" data-cue="micro" aria-pressed="false" aria-controls="cue-panel-micro"><span class="cue-level__number">3</span><span>Micro layer</span></button>
     </div>
   </div>
+  <ul class="macro-cue-key" aria-label="Macro layer annotation key">
+    <li><svg class="macro-cue-key__columns" viewBox="0 0 28 20" aria-hidden="true"><rect x="2" y="2" width="6" height="16" rx="1"/><rect x="11" y="2" width="6" height="16" rx="1"/><rect x="20" y="2" width="6" height="16" rx="1"/></svg><span>Column boxes</span></li>
+    <li><svg class="macro-cue-key__ruling" viewBox="0 0 28 20" aria-hidden="true"><path d="M2 5 H26 M2 10 H26 M2 15 H26"/></svg><span>Ruling guides</span></li>
+    <li><svg class="macro-cue-key__width" viewBox="0 0 28 20" aria-hidden="true"><path d="M3 10 H25 M3 5 V15 M25 5 V15"/></svg><span>Column width</span></li>
+    <li><svg class="macro-cue-key__spacing" viewBox="0 0 28 20" aria-hidden="true"><path d="M14 2 V18 M9 2 H19 M9 10 H19 M9 18 H19"/></svg><span>Line spacing</span></li>
+  </ul>
   <p class="cue-explorer__credit">Central fragment: T-S A8.3 · Cambridge University Library.</p>
 
   <div class="cue-explorer__details">
     <section id="cue-panel-macro" class="cue-panel" data-cue-panel="macro" aria-labelledby="cue-button-macro">
       <h4><span>01</span> Macro layer</h4>
       <p>Look at the overall page: its columns, layout, ruling and spacing. Ink colour can vary with damage and photography, so this similarity alone does not establish a join.</p>
+      <p class="macro-cue-description">The boxes outline the three columns. Dashed horizontal guides illustrate ruling, while brackets indicate column width and the spacing between lines.</p>
       <ul class="cue-list"><li>Background colour</li><li>Ink colour</li><li>Ruling type</li><li>Number of columns</li><li>Column width</li><li>Line spacing</li></ul>
     </section>
     <section id="cue-panel-textual" class="cue-panel" data-cue-panel="textual" aria-labelledby="cue-button-textual">

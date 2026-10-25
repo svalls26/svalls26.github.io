@@ -796,8 +796,33 @@ body {
 .cue-manuscript__annotations {
   rect { fill: rgba(103, 80, 128, 0.1); stroke: #675080; stroke-width: 7; }
   path { fill: none; stroke: #675080; stroke-width: 6; }
+  .macro-guide--columns rect { fill: rgba(103, 80, 128, 0.045); stroke-width: 6; }
+  .macro-guide--ruling path { stroke: #35735b; stroke-width: 9; stroke-dasharray: 20 15; }
+  .macro-guide--width path { stroke: #815032; stroke-width: 9; }
+  .macro-guide--spacing path { stroke: #315e78; stroke-width: 9; }
   [hidden] { display: none; }
 }
+
+.page__content .macro-cue-key {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0 0 1.2rem;
+  color: $muted-text-color;
+  font-size: 0.7rem;
+  list-style: none;
+
+  li { display: flex; align-items: center; justify-content: center; gap: 0.4rem; margin: 0; }
+  svg { flex: 0 0 26px; width: 26px; height: 20px; fill: none; stroke-width: 1.7; }
+  .macro-cue-key__columns { stroke: #675080; }
+  .macro-cue-key__ruling { stroke: #35735b; stroke-dasharray: 3 2; }
+  .macro-cue-key__width { stroke: #815032; }
+  .macro-cue-key__spacing { stroke: #315e78; }
+}
+
+.cue-explorer:not([data-active-cue="macro"]) .macro-cue-key { display: none; }
+.cue-panel .macro-cue-description { color: $muted-text-color; font-size: 0.8rem; }
 
 .cue-level {
   position: absolute;
@@ -896,6 +921,7 @@ body {
 .cue-panel .cue-panel__takeaway { padding-left: 0.9rem; border-left: 2px solid #c9b8d6; font-size: 0.85rem; }
 
 @media (max-width: 500px) {
+  .page__content .macro-cue-key { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cue-level { font-size: 0.7rem; }
   .cue-level__number { width: 30px; height: 30px; }
   .cue-examples { gap: 0.7rem; }
