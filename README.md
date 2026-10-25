@@ -14,7 +14,7 @@ A personal website with About, Research, and Chess pages, built with Jekyll and 
 
 The portrait is the original supplied photograph; it has not been retouched.
 
-The background section uses two vertical timelines on desktop and stacks them on phones. Dates and roles are taken from the supplied CV; the Cambridge Research Assistant role is marked as upcoming. The Cambridge logo is the unmodified SVG from the [University website](https://www.cam.ac.uk/themes/custom/fresh/images/interface/cambridge_university2.svg), used beside the education entry.
+The background section uses two vertical timelines on desktop and stacks them on phones. Dates and roles are taken from the supplied CV; the Cambridge Research Assistant role is marked as upcoming. Organisation names and logos link to their websites. Logo sources are recorded in `assets/images/institutions/SOURCES.md`; all logos retain their original proportions and colours.
 
 ## Chess replay
 
