@@ -38,7 +38,7 @@ classes:
 
     <section id="methodology" class="research-section" aria-labelledby="methodology-heading">
       <h2 id="methodology-heading">Methodology</h2>
-      <p>I followed a participatory design approach, grounding the technical work in the practices and needs of Hebrew manuscript scholars. The research moved through three connected phases.</p>
+      <p>I followed a participatory design approach, grounding the technical work in the practices and needs of expert scholars. The research was structured in three connected phases.</p>
       {% include methodology-diagram.html %}
     </section>
 
