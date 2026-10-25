@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sara Valls Navarro — my immortal game</title>
+  <link rel="stylesheet" href="../css/chess-viewer.css">
+  <script type="module" src="../js/immortal-game.js"></script>
+</head>
+<body>
+  <main class="viewer" aria-label="Chess game replay">
+    <header class="game-heading">
+      <p class="event">Spanish Under-18 Championship · 2018 · Round 2</p>
+      <p class="result">Josep Garcia Sancho — Sara Valls Navarro <strong>0–1</strong></p>
+    </header>
+    <div id="game-error" class="error" hidden>
+      <p>The replay could not load. <a href="https://www.chess.com/events/2018-spanish-championship-u18/02/Garcia_Sancho_Josep-Valls_Navarro_Sara" target="_blank" rel="noopener noreferrer">Open the original game on Chess.com</a>.</p>
+    </div>
+    <div id="game-content" class="game-layout" hidden>
+      <div class="board-panel">
+        <p id="player-top" class="player"></p>
+        <div id="board" class="board" role="img" aria-label="Chessboard, starting position" tabindex="0"></div>
+        <p id="player-bottom" class="player"></p>
+        <div class="controls" role="group" aria-label="Replay controls">
+          <button type="button" id="first" aria-label="First position" title="First position">⏮</button>
+          <button type="button" id="previous" aria-label="Previous move" title="Previous move">‹</button>
+          <button type="button" id="play" aria-label="Play game" aria-pressed="false" title="Play game">▶</button>
+          <button type="button" id="next" aria-label="Next move" title="Next move">›</button>
+          <button type="button" id="last" aria-label="Final position" title="Final position">⏭</button>
+          <button type="button" id="flip" aria-label="Flip board" title="Flip board">↻</button>
+        </div>
+        <p id="position-status" class="position-status" role="status" aria-live="polite"></p>
+      </div>
+      <aside class="moves-panel" aria-label="Game moves">
+        <h1>Moves</h1>
+        <div id="move-list" class="move-list" tabindex="0" aria-label="Scrollable move list"></div>
+      </aside>
+    </div>
+    <p id="game-loading" class="loading" role="status">Loading game…</p>
+    <p class="keyboard-hint">Use the arrows to replay, or choose a move. Sara’s side is at the bottom.</p>
+    <noscript><p>Enable JavaScript to replay the game, or <a href="immortal-game.pgn">download the PGN</a>.</p></noscript>
+  </main>
+</body>
+</html>
