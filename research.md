@@ -29,16 +29,11 @@ classes:
 
     <section id="genizah-jigsaw" class="research-section" aria-labelledby="genizah-jigsaw-heading">
       <h2 id="genizah-jigsaw-heading">The Genizah Jigsaw</h2>
-      <blockquote class="research-quote">
-        <p>“I think we have reason to congratulate ourselves... Please do not speak yet about the matter till tomorrow. I will come to you about 11 pm and talk over the matter with you.”</p>
-        <footer>— Solomon Schechter, <a href="https://wwwe.lib.cam.ac.uk/GF/31/">letter to Agnes Lewis</a>, 13 May 1896</footer>
-      </blockquote>
-      <p>In 1896, Cambridge scholar Solomon Schechter wrote these words after examining manuscript fragments bought by the twin sisters Agnes Lewis and Margaret Gibson. Among them he recognised a rare Hebrew text of <em>Ben Sira</em>. The discovery led him to the Ben Ezra Synagogue in Fustat, Old Cairo, and to the extraordinary manuscript collection known as the <a href="https://www.cam.ac.uk/stories/discarded-history-treasures-of-the-cairo-genizah">Cairo Genizah</a>.</p>
-      <p>Today, damage and the sale and resale of fragments have left this record of medieval Jewish life scattered across collections worldwide. Pieces of the same manuscript can sit in different institutions, with their connections lost. Reuniting them—known as <em>join discovery</em>—is a vast scholarly jigsaw. My thesis explores how AI can help scholars find likely matches while keeping interpretation and judgement in their hands.</p>
       <figure class="research-figure">
         <img src="{{ '/assets/images/research/solomon-schechter.jpg' | relative_url }}" alt="Solomon Schechter seated at a table in Cambridge, surrounded by piles of manuscript fragments in 1898." width="1200" height="1059">
         <figcaption>Solomon Schechter at work in Cambridge, 1898. Cambridge University Library, via <a href="https://artsandculture.google.com/asset/solomon-schechter-at-work-in-cambridge-cambridge-university-library/1gFAH8WCN2YE-A">Google Arts &amp; Culture</a>.</figcaption>
       </figure>
+      <p>Medieval manuscript collections have become fragmented and dispersed across institutions worldwide through damage and the sale and resale of fragments. The <a href="https://www.cam.ac.uk/stories/discarded-history-treasures-of-the-cairo-genizah">Cairo Genizah</a> is no exception: estimated to contain around 400,000 fragments, it is one of the most important collections for the study of medieval Jewish history. Generations of scholars have been trying to solve this jigsaw by making joins <a href="https://drive.google.com/file/d/1f63JcBByUEnj4Q4bZbJxVZQWwxJD1nya/view?usp=sharing" title="Jefferson (2022), The Cairo Genizah and the Age of Discovery in Egypt; reference 30 in the thesis">[30]</a>—identifying two or more fragments that belonged to the same original work <a href="https://drive.google.com/file/d/1f63JcBByUEnj4Q4bZbJxVZQWwxJD1nya/view?usp=sharing" title="Wolf et al. (2011), Identifying join candidates in the Cairo Genizah; reference 72 in the thesis">[72]</a>. As Schechter himself put it, this work “is not for one man, and not for one generation”.</p>
     </section>
 
     <section id="methodology" class="research-section" aria-labelledby="methodology-heading">

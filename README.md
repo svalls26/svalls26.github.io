@@ -26,7 +26,7 @@ As visitors scroll through Background, a purple line grows along each timeline a
 
 The Research page presents the MPhil thesis in five sections, with a sticky contents menu on the left on desktop and an in-flow menu on smaller screens. The current section is highlighted as the reader scrolls. The full thesis is linked at the top; the section summaries are drawn from the supplied dissertation. `assets/js/research.js` enhances the standard section links, which also work without JavaScript.
 
-The opening photograph is hosted locally and credited to Cambridge University Library via Google Arts & Culture. See `assets/images/research/SOURCES.md` for its source and attribution. The opening quotation follows the wording supplied by Sara and used in her dissertation.
+The opening photograph is hosted locally and credited to Cambridge University Library via Google Arts & Culture. See `assets/images/research/SOURCES.md` for its source and attribution. The introductory paragraph and its short Schechter quotation follow the wording supplied by Sara. Numbered references link to the full thesis, with bibliographic details in their link titles.
 
 ## Chess replay
 
