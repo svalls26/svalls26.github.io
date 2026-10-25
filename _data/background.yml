@@ -6,7 +6,7 @@
       logo: /assets/images/institutions/cambridge.svg
       url: https://www.cam.ac.uk/
       period: Oct 2025 – Sep 2026
-      location: Cambridge, UK
+      location: Cambridge, United Kingdom
     - title: BSc Data Science
       organisation: Universidad Europea de Valencia
       logo: /assets/images/institutions/universidad-europea.svg
@@ -22,7 +22,7 @@
       logo: /assets/images/institutions/cambridge.svg
       url: https://www.cam.ac.uk/
       period: Nov 2026 – Apr 2027
-      location: Cambridge, UK
+      location: Cambridge, United Kingdom
       upcoming: true
       detail: Department of Engineering · ai@cam AI-deas Sprint
     - title: Data Engineer
