@@ -75,4 +75,8 @@ You can also use standard `bundle install` and `bundle exec jekyll serve` with y
 
 ## Publishing
 
-This repository is local. A remote repository, hosting, and a custom domain can be added later. Set `url` and, when needed, `baseurl` in `_config.yml` before publishing. GitHub Pages should use a Jekyll build workflow or another host can serve the generated `_site/` folder.
+The site is configured for `https://svalls26.github.io`, with an empty `baseurl` for the account-level GitHub Pages repository. `.github/workflows/deploy.yml` builds and deploys pushes to `main`, and can also be started manually from GitHub’s Actions tab. In the repository’s **Settings → Pages**, select **GitHub Actions** as the publishing source.
+
+The workflow uses Ruby 3.3 on Ubuntu 24.04, installs the existing Gemfile dependencies through Bundler, builds Jekyll in production mode, and uploads only `_site/` to GitHub Pages. The lockfile includes both this Mac’s platform and `x86_64-linux` for the runner. Deployment uses GitHub’s built-in token; no personal token is stored in the repository. Generated files remain ignored locally.
+
+After reviewing and committing changes, push `main` to publish. The workflow and public URL can be checked in GitHub’s Actions tab and Pages settings. A custom domain can be configured later.
