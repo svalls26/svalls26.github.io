@@ -13,12 +13,12 @@ breadcrumbs: false
 
 author:
   name: "Sara Valls Navarro"
+  location: "Cambridge, United Kingdom"
   avatar: "/assets/images/portrait.jpg"
   home: "/"
   bio: "Human-Centric AI for the real-world"
   linkedin: "sara-valls-navarro"
   emails:
-    - "svallsnavarro26@gmail.com"
     - "sv533@cam.ac.uk"
 
 footer:
