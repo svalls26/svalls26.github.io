@@ -1,5 +1,8 @@
 <section id="background" class="background" aria-labelledby="background-heading">
-  <h2 id="background-heading" class="bio__eyebrow">Background</h2>
+  <div class="background__header">
+    <h2 id="background-heading" class="bio__eyebrow">Background</h2>
+    <a class="background__cv" href="https://drive.google.com/file/d/1ana20jevJUCO8VyqcAd9yk-HIaMBbmwR/view?usp=sharing">Link to CV</a>
+  </div>
   <div class="background__grid">
     {% for column in site.data.background %}
     <section class="background__column" aria-labelledby="{{ column.id }}-heading">
