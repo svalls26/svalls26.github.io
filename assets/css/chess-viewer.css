@@ -32,7 +32,7 @@ button { font: inherit; }
   text-decoration: none;
   vertical-align: baseline;
 }
-.rating { color: #847361; font-size: 0.77rem; white-space: nowrap; }
+.player-color { color: #847361; font-size: 0.77rem; white-space: nowrap; }
 .board + .player { margin-top: 7px; margin-bottom: 12px; }
 
 .board {
@@ -102,7 +102,7 @@ button:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 2px s
   .move-list { grid-template-columns: repeat(2, minmax(0, 1fr)); max-height: 170px; }
   .move-row button { min-height: 32px; }
   .player strong { font-size: 0.85rem; }
-  .rating { font-size: 0.73rem; }
+  .player-color { font-size: 0.73rem; }
   .game-heading { gap: 8px; }
   .event { font-size: 0.73rem; }
 }

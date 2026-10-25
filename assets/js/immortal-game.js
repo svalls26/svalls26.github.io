@@ -61,10 +61,10 @@ async function start() {
       title.textContent = "FM";
       name.prepend(title, document.createTextNode(" "));
     }
-    const rating = document.createElement("span");
-    rating.className = "rating";
-    rating.textContent = color === "b" ? "1879 · Black" : "2057 · White";
-    element.append(name, rating);
+    const colorLabel = document.createElement("span");
+    colorLabel.className = "player-color";
+    colorLabel.textContent = color === "b" ? "Black" : "White";
+    element.append(name, colorLabel);
   }
 
   function render() {
