@@ -9,6 +9,8 @@
   const mobileScenes = process.querySelectorAll('.join-process__mobile');
   const cues = ['macro', 'textual', 'micro'];
   const guides = ['columns', 'ruling', 'width', 'spacing'];
+  const feedback = document.querySelector('.participant-feedback');
+  const comments = feedback ? Array.from(feedback.children) : [];
   const stages = ['discovery', 'confirmation'].map(name => ({ name, start: 0, duration: 1, progress: 0 }));
   let reveals = [];
   let initialY = 0;
@@ -35,6 +37,16 @@
       .concat(cues.map((name, index) => ({ name, start: cueStart + manuscript.height * index * 0.18 })));
   }
 
+  function updateFeedback() {
+    const readingLine = window.innerHeight * 0.75;
+    comments.forEach(comment => {
+      const rect = comment.getBoundingClientRect();
+      if (motion.matches || rect.top + Math.min(rect.height * 0.2, 24) < readingLine) {
+        comment.classList.add('is-visible');
+      }
+    });
+  }
+
   function update() {
     frame = 0;
     stages.forEach(stage => {
@@ -47,6 +59,7 @@
     reveals.forEach(reveal => {
       if (window.scrollY > reveal.start) canvas.classList.add(`is-${reveal.name}-revealed`);
     });
+    updateFeedback();
   }
 
   function queueUpdate() {
@@ -73,8 +86,10 @@
     lastY = y;
   }, { passive: true });
   window.addEventListener('resize', () => { if (armed) measure(); });
-  motion.addEventListener('change', queueUpdate);
+  motion.addEventListener('change', () => { updateFeedback(); queueUpdate(); });
   story.classList.add('research-reveals');
+  if (feedback) feedback.classList.add('feedback-reveals');
+  if (motion.matches) updateFeedback();
   ['wheel', 'touchmove', 'pointerdown', 'keydown'].forEach(type => {
     window.addEventListener(type, arm, { once: true, passive: true });
   });

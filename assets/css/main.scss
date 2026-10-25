@@ -625,6 +625,27 @@ body {
   .participant-feedback__limitation p { font-family: $sans-serif; font-size: 0.8rem; font-style: normal; }
 }
 
+.participant-feedback.feedback-reveals {
+  > * { opacity: 0; transform: translateY(10px); }
+  > .is-visible {
+    opacity: 1;
+    transform: none;
+    transition: opacity 450ms ease, transform 450ms ease;
+  }
+  > .is-visible:nth-child(2) { transition-delay: 100ms; }
+  > .is-visible:nth-child(3) { transition-delay: 200ms; }
+  > .is-visible:nth-child(4) { transition-delay: 300ms; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .participant-feedback.feedback-reveals > *,
+  .participant-feedback.feedback-reveals > .is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 @media (max-width: 600px) {
   .genizah-intro .genizah-intro__portrait { width: 100%; }
   .genidaat-study { grid-template-columns: 1fr; gap: 1.5rem; }
