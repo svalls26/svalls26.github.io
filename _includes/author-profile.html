@@ -24,5 +24,12 @@
       </a>
     </p>
     {% endif %}
+    {% if author.emails %}
+    <ul class="author__emails">
+      {% for email in author.emails %}
+      <li><a href="mailto:{{ email | escape }}" itemprop="email"><i class="fas fa-envelope" aria-hidden="true"></i><span>{{ email | escape }}</span></a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
   </div>
 </div>

@@ -116,7 +116,8 @@ body {
   p { margin-bottom: 0; }
 }
 
-.author__linkedin {
+.author__linkedin,
+.author__content .author__emails {
   margin: 0.65rem 0 0;
   font-size: 0.8rem;
   line-height: 1.5;
@@ -129,6 +130,22 @@ body {
 
     &:hover { text-decoration: underline; }
   }
+}
+
+.author__content .author__emails {
+  padding: 0;
+  list-style: none;
+
+  li { margin-bottom: 0.35rem; }
+
+  a {
+    max-width: 100%;
+    align-items: baseline;
+    font-size: 0.75rem;
+  }
+
+  i { flex-shrink: 0; }
+  span { min-width: 0; overflow-wrap: anywhere; }
 }
 
 .author__urls-wrapper,
