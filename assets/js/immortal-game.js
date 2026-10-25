@@ -54,6 +54,13 @@ async function start() {
     element.replaceChildren();
     const name = document.createElement("strong");
     name.textContent = color === "b" ? "Sara Valls Navarro" : "Josep Garcia Sancho";
+    if (color === "w") {
+      const title = document.createElement("abbr");
+      title.className = "player-title";
+      title.title = "FIDE Master";
+      title.textContent = "FM";
+      name.prepend(title, document.createTextNode(" "));
+    }
     const rating = document.createElement("span");
     rating.className = "rating";
     rating.textContent = color === "b" ? "1879 · Black" : "2057 · White";

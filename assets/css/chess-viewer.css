@@ -19,6 +19,19 @@ button { font: inherit; }
 .board-panel { min-width: 0; }
 .player { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin: 0 0 7px; line-height: 1.5; }
 .player strong { font-weight: 500; font-size: 0.9rem; }
+.player-title {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  background: #b33430;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  vertical-align: baseline;
+}
 .rating { color: #847361; font-size: 0.77rem; white-space: nowrap; }
 .board + .player { margin-top: 7px; margin-bottom: 12px; }
 
