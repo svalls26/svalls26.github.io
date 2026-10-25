@@ -1,5 +1,3 @@
-{% include join-process.html %}
-
 <div class="cue-explorer" data-cue-explorer data-active-cue="macro">
   <h3>What do scholars look for?</h3>
   <p class="cue-explorer__intro">Explore the expert’s workflow. Select a numbered point to see the cues used at each level.</p>
@@ -35,35 +33,33 @@
       <button type="button" id="cue-button-micro" class="cue-level cue-level--micro" data-cue="micro" aria-pressed="false" aria-controls="cue-panel-micro"><span class="cue-level__number">3</span><span>Micro layer</span></button>
     </div>
   </div>
+  <p class="cue-explorer__credit">Central fragment: T-S A8.3 · Cambridge University Library.</p>
   <ul class="macro-cue-key" aria-label="Macro layer annotation key">
+    <li><svg class="macro-cue-key__background" viewBox="0 0 28 20" aria-hidden="true"><rect x="3" y="2" width="22" height="16" rx="2"/><path d="M7 7 H16 M12 12 H21"/></svg><span>Background colour</span></li>
+    <li><svg class="macro-cue-key__ink" viewBox="0 0 28 20" aria-hidden="true"><path d="M14 2 C11 6 7 10 7 13 C7 20 21 20 21 13 C21 10 17 6 14 2Z"/></svg><span>Ink colour</span></li>
     <li><svg class="macro-cue-key__columns" viewBox="0 0 28 20" aria-hidden="true"><rect x="2" y="2" width="6" height="16" rx="1"/><rect x="11" y="2" width="6" height="16" rx="1"/><rect x="20" y="2" width="6" height="16" rx="1"/></svg><span>Column boxes</span></li>
     <li><svg class="macro-cue-key__ruling" viewBox="0 0 28 20" aria-hidden="true"><path d="M2 5 H26 M2 10 H26 M2 15 H26"/></svg><span>Ruling guides</span></li>
     <li><svg class="macro-cue-key__width" viewBox="0 0 28 20" aria-hidden="true"><path d="M3 10 H25 M3 5 V15 M25 5 V15"/></svg><span>Column width</span></li>
     <li><svg class="macro-cue-key__spacing" viewBox="0 0 28 20" aria-hidden="true"><path d="M14 2 V18 M9 2 H19 M9 10 H19 M9 18 H19"/></svg><span>Line spacing</span></li>
   </ul>
-  <p class="cue-explorer__credit">Central fragment: T-S A8.3 · Cambridge University Library.</p>
 
   <div class="cue-explorer__details">
     <section id="cue-panel-macro" class="cue-panel" data-cue-panel="macro" aria-labelledby="cue-button-macro">
       <h4><span>01</span> Macro layer</h4>
       <p>Look at the overall page: its columns, layout, ruling and spacing. Ink colour can vary with damage and photography, so this similarity alone does not establish a join.</p>
       <p class="macro-cue-description">The boxes outline the three columns. Dashed horizontal guides illustrate ruling, while brackets indicate column width and the spacing between lines.</p>
-      <ul class="cue-list"><li>Background colour</li><li>Ink colour</li><li>Ruling type</li><li>Number of columns</li><li>Column width</li><li>Line spacing</li></ul>
     </section>
     <section id="cue-panel-textual" class="cue-panel" data-cue-panel="textual" aria-labelledby="cue-button-textual">
       <h4><span>02</span> Textual apparatus</h4>
       <p>Inspect the marks and notes around the main text. These can guide comparison, but some may have been added later by another hand.</p>
-      <ul class="cue-list"><li>Vocalisation</li><li>Masoretic notes</li><li><em>Sedarim</em> markers</li></ul>
       <div class="cue-examples">
         <figure><img src="{{ '/assets/images/research/seder-anchor.png' | relative_url }}" alt="A plain seder marker between two columns of text in T-S A9.17." width="1146" height="843" loading="lazy"><figcaption>Plain marker · T-S A9.17</figcaption></figure>
         <figure><img src="{{ '/assets/images/research/seder-join.png' | relative_url }}" alt="An ornamented seder marker between two columns of text in T-S A6.8." width="1146" height="843" loading="lazy"><figcaption>Ornamented marker · T-S A6.8</figcaption></figure>
       </div>
-      <p class="cue-panel__takeaway">These fragments belong to the same codex despite their different marker styles: one cue is not enough on its own.</p>
     </section>
     <section id="cue-panel-micro" class="cue-panel" data-cue-panel="micro" aria-labelledby="cue-button-micro">
       <h4><span>03</span> Micro layer</h4>
-      <p>Compare individual letter forms: the shape, angle and proportions of the strokes. This close inspection supports the scholar’s palaeographic judgement.</p>
-      <ul class="cue-list"><li>Letter forms</li></ul>
+      <p>Compare individual letter forms: the shape, angle and proportions of the strokes.</p>
       <div class="cue-examples cue-examples--letters">
         <figure><img src="{{ '/assets/images/research/aleph-ts-a8-3.jpg' | relative_url }}" alt="High-resolution close-up of the Hebrew letter aleph in T-S A8.3, the first manuscript in the supplied image." width="235" height="272" loading="lazy"><figcaption><em>Aleph</em> (א)<br>T-S A8.3</figcaption></figure>
         <figure><img src="{{ '/assets/images/research/aleph-ts-ns250-3.jpg' | relative_url }}" alt="High-resolution close-up of the Hebrew letter aleph in T-S NS 250.3, the third manuscript in the supplied image." width="216" height="249" loading="lazy"><figcaption><em>Aleph</em> (א)<br>T-S NS 250.3</figcaption></figure>

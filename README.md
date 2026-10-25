@@ -32,7 +32,9 @@ The Join Problem includes a two-stage workflow illustration in `_includes/join-p
 
 The opening photograph is hosted locally and credited to Cambridge University Library via Google Arts & Culture. See `assets/images/research/SOURCES.md` for its source and attribution. The introductory paragraph follows the wording supplied by Sara.
 
-The macro layer overlays column outlines, dashed ruling guides, a column-width bracket and line-spacing marks. A matching key and text explanation identify these schematic guides; they appear only while the macro layer is selected.
+The discovery/confirmation diagram opens the Join Problem section before its explanatory text. The central manuscript’s credit appears immediately below the image, above the macro key. The macro layer overlays column outlines, dashed ruling guides, a column-width bracket and line-spacing marks. Its six-item icon key also includes background colour and ink colour; it appears only while the macro layer is selected. The textual and micro layers retain their brief explanations and visual examples without separate cue lists.
+
+`_includes/head.html` preserves the Minimal Mistakes head and adds a build version to the main stylesheet URL so previews load the latest layout after a rebuild.
 
 ## Chess replay
 

@@ -44,6 +44,7 @@ classes:
 
     <section id="join-problem" class="research-section" aria-labelledby="join-problem-heading">
       <h2 id="join-problem-heading">The Join Problem</h2>
+      {% include join-process.html %}
       <p>Through a formative study conducted with <strong>5 scholars</strong>, I identified two stages in the join discovery process:</p>
       <ol class="join-stages">
         <li><strong>Discovery:</strong> finding promising candidates within the collection.</li>
