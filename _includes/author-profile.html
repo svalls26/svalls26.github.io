@@ -1,0 +1,28 @@
+{% assign author = page.author | default: page.authors[0] | default: site.author %}
+{% assign author = site.data.authors[author] | default: author %}
+
+<div itemscope itemtype="https://schema.org/Person">
+  {% if author.avatar %}
+  <div class="author__avatar">
+    {% if author.home %}<a href="{{ author.home | relative_url }}">{% endif %}
+      <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" itemprop="image">
+    {% if author.home %}</a>{% endif %}
+  </div>
+  {% endif %}
+
+  <div class="author__content">
+    {% if author.home %}<a href="{{ author.home | relative_url }}">{% endif %}
+      <h3 class="author__name" itemprop="name">{{ author.name }}</h3>
+    {% if author.home %}</a>{% endif %}
+    {% if author.bio %}
+    <div class="author__bio" itemprop="description">{{ author.bio | markdownify }}</div>
+    {% endif %}
+    {% if author.linkedin %}
+    <p class="author__linkedin">
+      <a href="https://www.linkedin.com/in/{{ author.linkedin }}/" itemprop="sameAs" rel="me">
+        <i class="fab fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
+      </a>
+    </p>
+    {% endif %}
+  </div>
+</div>

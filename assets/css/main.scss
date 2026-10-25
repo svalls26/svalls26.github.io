@@ -110,6 +110,27 @@ body {
   text-decoration: none;
 }
 
+.author__bio {
+  margin-bottom: 0;
+
+  p { margin-bottom: 0; }
+}
+
+.author__linkedin {
+  margin: 0.65rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: $link-color;
+
+    &:hover { text-decoration: underline; }
+  }
+}
+
 .author__urls-wrapper,
 .page__meta,
 .page__share,
