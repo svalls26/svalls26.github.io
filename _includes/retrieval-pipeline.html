@@ -1,0 +1,76 @@
+<figure class="retrieval-figure">
+  <div class="retrieval-figure__scroll" role="region" aria-label="Retrieval pipeline diagram; scroll horizontally on smaller screens" tabindex="0">
+    <svg class="retrieval-diagram" viewBox="0 0 860 740" role="img" aria-labelledby="retrieval-diagram-title retrieval-diagram-description">
+      <title id="retrieval-diagram-title">From manuscript images to ranked candidate joins</title>
+      <desc id="retrieval-diagram-description">Stage I, writing-unit extraction: locate text lines and ink in the supplied plate, exclude photographic backgrounds, and sample overlapping patches. Stage II, fragment descriptor: encode each patch with frozen DINOv3 ViT-L/16, retain foreground tokens, pool them across recto, verso and any further images of the same classmark, and aggregate them with VLAD into one descriptor. Stage III, ranking: compare fragment descriptors by cosine similarity to return candidates for scholarly review.</desc>
+      <defs>
+        <marker id="retrieval-arrow" markerWidth="8" markerHeight="7" refX="7" refY="3.5" orient="auto"><path d="M0 0 L8 3.5 L0 7Z" fill="#8a7d93"/></marker>
+      </defs>
+
+      <g class="retrieval-diagram__phase">
+        <text x="10" y="88">Stage I</text>
+        <text class="retrieval-diagram__phase-name" x="10" y="114">Writing-unit<tspan x="10" dy="22">extraction</tspan></text>
+      </g>
+      <rect class="retrieval-diagram__extraction" x="120" y="20" width="730" height="195" rx="5"/>
+      <image href="{{ '/assets/images/research/retrieval-plate.png' | relative_url }}" x="135" y="50" width="200" height="120"/>
+      <image href="{{ '/assets/images/research/retrieval-ink.png' | relative_url }}" x="385" y="50" width="200" height="120"/>
+      <image href="{{ '/assets/images/research/retrieval-patch-placement.png' | relative_url }}" x="635" y="50" width="200" height="120"/>
+      <g class="retrieval-diagram__captions">
+        <text x="235" y="195">Plate as supplied</text>
+        <text x="485" y="195">Lines and ink</text>
+        <text x="735" y="195">Patch placement</text>
+      </g>
+      <g class="retrieval-diagram__connector" marker-end="url(#retrieval-arrow)"><path d="M344 110 H373"/><path d="M594 110 H623"/></g>
+
+      <g class="retrieval-diagram__zoom"><path d="M675 170 L672 183 M666 207 L660 234"/><path d="M790 170 L794 183 M803 207 L810 234"/></g>
+      <image href="{{ '/assets/images/research/retrieval-patches.png' | relative_url }}" x="660" y="234" width="150" height="101"/>
+      <text class="retrieval-diagram__caption" x="735" y="357">Example patches</text>
+      <path class="retrieval-diagram__connector" d="M735 368 V410 H215 V457" marker-end="url(#retrieval-arrow)"/>
+
+      <g transform="translate(0 60)">
+      <g class="retrieval-diagram__phase">
+        <text x="10" y="431">Stage II</text>
+        <text class="retrieval-diagram__phase-name" x="10" y="457">Fragment<tspan x="10" dy="22">descriptor</tspan></text>
+      </g>
+      <g class="retrieval-diagram__backbone">
+        <rect x="155" y="405" width="120" height="80" rx="6"/>
+        <text x="215" y="431">DINOv3</text>
+        <text x="215" y="453">ViT-L/16</text>
+        <text class="retrieval-diagram__small" x="215" y="474">Frozen</text>
+      </g>
+      <path class="retrieval-diagram__connector" d="M283 444 H325" marker-end="url(#retrieval-arrow)"/>
+      <text class="retrieval-diagram__caption retrieval-diagram__edge-label" x="364" y="399">Token grids</text>
+      <g class="retrieval-diagram__tokens">
+        <rect x="335" y="408" width="22" height="10"/><rect x="335" y="420" width="22" height="10"/>
+        <rect class="retrieval-diagram__blank-token" x="335" y="432" width="22" height="10"/>
+        <rect x="335" y="444" width="22" height="10"/><rect x="335" y="456" width="22" height="10"/><rect x="335" y="468" width="22" height="10"/>
+        <rect x="371" y="408" width="22" height="10"/><rect class="retrieval-diagram__blank-token" x="371" y="420" width="22" height="10"/>
+        <rect x="371" y="432" width="22" height="10"/><rect x="371" y="444" width="22" height="10"/>
+        <rect x="371" y="456" width="22" height="10"/><rect class="retrieval-diagram__blank-token" x="371" y="468" width="22" height="10"/>
+      </g>
+      <g class="retrieval-diagram__small retrieval-diagram__captions"><text x="345" y="500">Recto</text><text x="383" y="500">Verso</text></g>
+      <path class="retrieval-diagram__connector" d="M411 408 H419 V478 H411"/>
+      <g class="retrieval-diagram__captions"><text x="492" y="422">Foreground<tspan x="492" dy="22">tokens pooled</tspan><tspan x="492" dy="22">per classmark</tspan></text></g>
+      <path class="retrieval-diagram__connector" d="M558 444 H598" marker-end="url(#retrieval-arrow)"/>
+      <g class="retrieval-diagram__output">
+        <path d="M610 444 L680 410 L750 444 L680 478Z"/>
+        <text x="680" y="450">VLAD</text>
+      </g>
+
+      </g>
+      <g transform="translate(0 120)">
+      <g class="retrieval-diagram__phase">
+        <text x="10" y="552">Stage III</text>
+        <text class="retrieval-diagram__phase-name" x="10" y="578">Ranking</text>
+      </g>
+      <path class="retrieval-diagram__connector" d="M680 420 V515" marker-end="url(#retrieval-arrow)"/>
+      <text class="retrieval-diagram__small" x="697" y="474">Descriptor</text>
+      <g class="retrieval-diagram__output">
+        <circle cx="680" cy="560" r="39"/>
+        <text x="680" y="566">Ranking</text>
+      </g>
+      </g>
+    </svg>
+  </div>
+  <figcaption class="retrieval-figure__pan-hint">Scroll sideways to explore the diagram.</figcaption>
+</figure>

@@ -464,15 +464,6 @@ body {
   top: 2rem;
   padding-top: 0.15rem;
 
-  .research-contents__label {
-    margin: 0 0 1rem;
-    color: $muted-text-color;
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
   ol {
     padding: 0;
     margin: 0;
@@ -584,6 +575,61 @@ body {
     font-size: 0.75rem;
     line-height: 1.5;
   }
+}
+
+.genizah-intro {
+  display: grid;
+  grid-template-columns: 38% minmax(0, 1fr);
+  align-items: start;
+  gap: 1.3rem;
+
+  .genizah-intro__portrait {
+    margin: 0.2rem 0 0;
+
+    img { border-radius: 3px; }
+    figcaption { font-size: 0.65rem; line-height: 1.4; }
+  }
+}
+
+.genidaat-prototype-link { font-weight: 600; text-underline-offset: 4px; }
+.genidaat-feature {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 2rem 0;
+
+  .genidaat-feature__image { margin: 0; }
+  .genidaat-feature__text p { margin-bottom: 0.8rem; font-size: 0.85rem; line-height: 1.55; }
+  .genidaat-feature__text .genidaat-image-hint { color: $muted-text-color; font-size: 0.7rem; }
+}
+
+.genidaat-feature, .genidaat-comparison, .genidaat-evaluation {
+  h3 { margin: 0 0 0.8rem; font-size: 1.2rem; font-weight: 500; }
+  .research-figure a { display: block; border-radius: 5px; }
+  .research-figure a:focus-visible { outline: 2px solid $link-color; outline-offset: 5px; }
+  .research-figure img { border: 1px solid #ded8d0; border-radius: 5px; }
+}
+
+.genidaat-comparison { margin: 2.5rem 0; }
+.genidaat-evaluation { padding-top: 1.8rem; border-top: 1px solid #e6e2e9; }
+.genidaat-sus { max-width: 480px; padding: 0.7rem; margin: 1.5rem auto 2rem; background: #fff; border: 1px solid #e6e2e9; }
+.genidaat-evaluation .genidaat-sus img { border: 0; border-radius: 0; }
+.participant-feedback {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+
+  blockquote { padding: 0.1rem 0 0.1rem 1rem; margin: 0; border-left: 2px solid #bba9ca; font-style: normal; }
+  p { margin: 0 0 0.3rem; font-family: $serif; font-size: 1rem; line-height: 1.5; font-style: italic; }
+  footer { color: $muted-text-color; font-size: 0.75rem; }
+}
+.genidaat-study-note { color: $muted-text-color; font-size: 0.8rem; }
+
+@media (max-width: 600px) {
+  .genizah-intro { display: block; }
+  .genizah-intro .genizah-intro__portrait { width: 58%; max-width: 230px; margin: 0 auto 1.3rem; }
+  .genidaat-feature { grid-template-columns: 1fr; gap: 1rem; }
 }
 
 .methodology-figure {
@@ -698,6 +744,68 @@ body {
 .methodology-diagram__legend-output { fill: #c9b8d6; }
 .methodology-figure__pan-hint { display: none; }
 
+.retrieval-figure {
+  display: block;
+  margin: 1.4rem 0 1.7rem;
+
+  figcaption {
+    margin-top: 0.8rem;
+    color: $muted-text-color;
+    font-family: $sans-serif;
+    font-size: 0.7rem;
+    line-height: 1.5;
+  }
+}
+
+.retrieval-figure__scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+
+  &:focus-visible { outline: 2px solid $link-color; outline-offset: 5px; }
+}
+
+.retrieval-diagram {
+  display: block;
+  width: 100%;
+  min-width: 36rem;
+  height: auto;
+  font-family: $sans-serif;
+  font-size: 18px;
+
+  text { fill: $text-color; }
+  .retrieval-diagram__small { fill: $muted-text-color; font-size: 14px; }
+}
+
+.retrieval-diagram__phase {
+  > text { fill: $link-color; font-size: 19px; font-weight: 600; }
+  .retrieval-diagram__phase-name { fill: $muted-text-color; font-size: 16px; font-weight: 400; }
+}
+
+.retrieval-diagram__extraction { fill: none; stroke: #cfc3d9; stroke-dasharray: 5 5; }
+.retrieval-diagram__captions text,
+.retrieval-diagram__caption { text-anchor: middle; }
+.retrieval-diagram__connector { fill: none; stroke: #8a7d93; stroke-width: 1.5; stroke-linejoin: round; }
+.retrieval-diagram__zoom { fill: none; stroke: #a493af; stroke-width: 1.2; stroke-dasharray: 5 5; }
+.retrieval-diagram__edge-label { paint-order: stroke; stroke: $background-color; stroke-width: 8px; stroke-linejoin: round; }
+.retrieval-diagram__backbone {
+  rect { fill: #f0eeea; stroke: #d8d3da; }
+  text { text-anchor: middle; font-weight: 500; }
+}
+.retrieval-diagram__tokens {
+  rect { fill: #9a8da4; stroke: #c9bed0; stroke-width: 0.5; }
+  .retrieval-diagram__blank-token { fill: #eeebf0; }
+}
+.retrieval-diagram__output {
+  path, circle { fill: #ece5f1; stroke: #c9b8d6; }
+  text { fill: $link-color; text-anchor: middle; font-weight: 500; }
+}
+.retrieval-figure__pan-hint { display: none; }
+.research-section .retrieval-results-title { margin: 2rem 0 0.8rem; font-size: 1.25rem; font-weight: 500; }
+.retrieval-results-figure__plot { padding: 0.8rem; border: 1px solid #e6e2e9; background: #fff; }
+.retrieval-chapter-link { font-size: 0.85rem; }
+
 .page__content .join-stages {
   padding-left: 1.25rem;
   margin-bottom: 1.5rem;
@@ -743,6 +851,44 @@ body {
     font-size: 24px;
     font-weight: 600;
     text-anchor: middle;
+  }
+}
+
+// Research reveals are opt-in: every diagram is complete without JavaScript.
+.research-reveals {
+  .join-process__path--match {
+    opacity: 0;
+    stroke-dasharray: 100 100;
+    stroke-dashoffset: 100;
+    transition: stroke-dashoffset 850ms ease, opacity 250ms ease;
+  }
+  .join-process__dot--match { opacity: 0; transition: opacity 350ms ease; }
+  .is-discovery-revealed .join-match--discovery,
+  .is-confirmation-revealed .join-match--confirmation { opacity: 1; stroke-dashoffset: 0; }
+
+  .cue-level, .cue-connections g, [data-cue-overlay="macro"] > g {
+    opacity: 0;
+    transition: opacity 550ms ease;
+  }
+  .cue-level { transform: translateY(8px); transition: opacity 450ms ease, transform 450ms ease; }
+  .is-macro-revealed .cue-level--macro,
+  .is-textual-revealed .cue-level--textual,
+  .is-micro-revealed .cue-level--micro { opacity: 1; transform: none; }
+  .is-macro-revealed [data-cue-connection="macro"],
+  .is-textual-revealed [data-cue-connection="textual"],
+  .is-micro-revealed [data-cue-connection="micro"],
+  .is-columns-revealed .macro-guide--columns,
+  .is-ruling-revealed .macro-guide--ruling,
+  .is-width-revealed .macro-guide--width,
+  .is-spacing-revealed .macro-guide--spacing { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .research-reveals {
+    .join-process__path--match, .join-process__dot--match,
+    .cue-level, .cue-connections g, [data-cue-overlay="macro"] > g {
+      opacity: 1; stroke-dashoffset: 0; transform: none; transition: none;
+    }
   }
 }
 
@@ -827,7 +973,6 @@ body {
 }
 
 .cue-explorer:not([data-active-cue="macro"]) .macro-cue-key { display: none; }
-.cue-panel .macro-cue-description { color: $muted-text-color; font-size: 0.8rem; }
 
 .cue-level {
   position: absolute;
@@ -921,6 +1066,7 @@ body {
 
 @media (max-width: 700px) {
   .methodology-figure__pan-hint { display: inline; }
+  .retrieval-figure__pan-hint { display: inline; }
 }
 
 @media (max-width: 850px) {
