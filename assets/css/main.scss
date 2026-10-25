@@ -292,7 +292,7 @@ body {
     text-underline-offset: 3px;
   }
 
-  &:hover .timeline__logo-slot { border-color: #cbbdd6; }
+  &:hover .timeline__logo { opacity: 0.8; }
 }
 
 .timeline__organisation-name { min-width: 0; }
@@ -300,22 +300,21 @@ body {
 .timeline__logo-slot {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex: 0 0 104px;
-  height: 46px;
-  padding: 6px;
-  border: 1px solid #e7e0eb;
-  border-radius: 6px;
-  background: #fff;
+  flex: 0 0 auto;
+  width: 132px;
+  height: 40px;
 }
 
 .timeline__logo {
   display: block;
-  width: 90px;
+  width: 132px;
   max-width: 100%;
-  height: 32px;
+  height: 34px;
   object-fit: contain;
+  object-position: left center;
 }
+
+.timeline__organisation--with-name .timeline__logo-slot { width: 34px; }
 
 .page__content .timeline__period {
   margin-top: 0.45rem;

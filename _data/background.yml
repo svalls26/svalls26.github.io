@@ -27,7 +27,8 @@
       detail: Department of Engineering · ai@cam AI-deas Sprint
     - title: Data Engineer
       organisation: Token Flow
-      logo: /assets/images/institutions/token-flow.png
+      logo: /assets/images/institutions/token-flow-transparent.png
+      show_name: true
       url: https://tokenflow.live/
       period: Apr 2023 – Sep 2025
       location: Geneva, Switzerland
