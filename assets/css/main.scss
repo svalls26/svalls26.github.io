@@ -294,15 +294,6 @@ body {
   font-size: 0.8rem;
   font-weight: 400;
   line-height: 1.4;
-  text-decoration: none;
-
-  &:hover .timeline__organisation-name {
-    color: $link-color;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
-
-  &:hover .timeline__logo { opacity: 0.8; }
 }
 
 .timeline__organisation-name { min-width: 0; }

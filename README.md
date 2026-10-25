@@ -14,7 +14,7 @@ A personal website with About, Research, and Chess pages, built with Jekyll and 
 
 The portrait is the original supplied photograph; it has not been retouched.
 
-The background section uses two vertical timelines on desktop and stacks them on phones. Dates and roles are taken from the supplied CV; the Cambridge Research Assistant role is marked as upcoming. Logos link to their organisations' websites and retain accessible names. Only Token Flow also displays a separate name. Logo sources are recorded in `assets/images/institutions/SOURCES.md`; SVGs retain their original artwork, and the Token Flow PNG has its dark background removed.
+The background section uses two vertical timelines on desktop and stacks them on phones. Dates and roles are taken from the supplied CV; the Cambridge Research Assistant role is marked as upcoming. Organisation logos are not links and retain accessible names through image alt text or the adjacent visible name. Only Token Flow also displays a separate name. Logo sources are recorded in `assets/images/institutions/SOURCES.md`; SVGs retain their original artwork, and the Token Flow PNG has its dark background removed.
 
 ## Chess replay
 

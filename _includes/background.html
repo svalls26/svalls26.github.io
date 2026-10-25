@@ -11,10 +11,10 @@
         {% for entry in column.entries %}
         <li class="timeline__item">
           <h4>{{ entry.title }}</h4>
-          <a class="timeline__organisation{% if entry.show_name %} timeline__organisation--with-name{% endif %}" href="{{ entry.url }}" aria-label="{{ entry.organisation | escape }}">
-            {% if entry.logo %}<span class="timeline__logo-slot"><img class="timeline__logo" src="{{ entry.logo | relative_url }}" alt="" width="132" height="34" loading="lazy"></span>{% endif %}
+          <div class="timeline__organisation{% if entry.show_name %} timeline__organisation--with-name{% endif %}">
+            {% if entry.logo %}<span class="timeline__logo-slot"><img class="timeline__logo" src="{{ entry.logo | relative_url }}" alt="{% unless entry.show_name %}{{ entry.organisation | escape }}{% endunless %}" width="132" height="34" loading="lazy"></span>{% endif %}
             {% if entry.show_name %}<span class="timeline__organisation-name">{{ entry.organisation }}</span>{% endif %}
-          </a>
+          </div>
           <p class="timeline__period">{% if entry.upcoming %}<span class="timeline__status">Upcoming · </span>{% endif %}{{ entry.period }}<br>{{ entry.location }}</p>
           {% if entry.detail %}<p class="timeline__detail">{{ entry.detail }}</p>{% endif %}
         </li>
