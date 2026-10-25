@@ -28,6 +28,8 @@ The Research page presents the MPhil thesis in five sections, with a sticky cont
 
 The methodology figure in `_includes/methodology-diagram.html` recreates Sara’s supplied three-phase diagram as a compact inline SVG. It preserves the findings, retrieval pipeline, evaluation, and requirements connections, using the site’s typography and colours. On smaller screens, the figure scrolls horizontally rather than shrinking its labels. It includes a complete text description for screen readers.
 
+The Join Problem includes a two-stage workflow illustration and an interactive manuscript in `_includes/join-explorer.html`. Four numbered buttons reveal metadata, macro, textual-apparatus, and micro cues. `assets/js/join-explorer.js` supports pointer, touch and keyboard selection; without JavaScript, all four explanations remain visible. The manuscripts remain unchanged files; CSS framing and SVG viewports show individual fragments and letter-form details without retouching them.
+
 The opening photograph is hosted locally and credited to Cambridge University Library via Google Arts & Culture. See `assets/images/research/SOURCES.md` for its source and attribution. The introductory paragraph follows the wording supplied by Sara.
 
 ## Chess replay

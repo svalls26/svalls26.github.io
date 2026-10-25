@@ -38,14 +38,18 @@ classes:
 
     <section id="methodology" class="research-section" aria-labelledby="methodology-heading">
       <h2 id="methodology-heading">Methodology</h2>
-      <p>I followed a participatory design approach, grounding the technical work in the practices and needs of expert scholars. The research was structured in three connected phases.</p>
+      <p>I followed a participatory design approach, grounding the technical work in the practices and needs of expert scholars. The research was structured in three connected phases:</p>
       {% include methodology-diagram.html %}
     </section>
 
     <section id="join-problem" class="research-section" aria-labelledby="join-problem-heading">
       <h2 id="join-problem-heading">The Join Problem</h2>
-      <p>A join connects fragments that belonged to the same original manuscript. They need not share a torn edge: they may be separate leaves of the same book. Scholars weigh evidence such as letter forms, page layout, material and textual features to decide whether the connection is plausible.</p>
-      <p>The formative study distinguished two stages: <strong>discovery</strong>, finding promising candidates in a vast collection, and <strong>confirmation</strong>, examining those candidates closely. The main bottleneck was discovery. This shaped the role of AI in the system: surface a manageable set of possibilities for experts to assess.</p>
+      <p>Through a formative study conducted with <strong>5 scholars</strong>, I identified two stages in the join discovery process:</p>
+      <ol class="join-stages">
+        <li><strong>Discovery:</strong> finding promising candidates within the collection.</li>
+        <li><strong>Confirmation:</strong> examining visual cues to confirm or discard a join.</li>
+      </ol>
+      {% include join-explorer.html %}
     </section>
 
     <section id="retrieving-candidate-joins" class="research-section" aria-labelledby="retrieving-candidate-joins-heading">
@@ -63,3 +67,4 @@ classes:
   </div>
 </div>
 <script src="{{ '/assets/js/research.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/join-explorer.js' | relative_url }}" defer></script>

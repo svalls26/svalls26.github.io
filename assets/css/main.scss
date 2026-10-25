@@ -698,6 +698,257 @@ body {
 .methodology-diagram__legend-output { fill: #c9b8d6; }
 .methodology-figure__pan-hint { display: none; }
 
+.page__content .join-stages {
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
+
+  li { padding-left: 0.25rem; margin-bottom: 0.45rem; }
+  li::marker { color: $link-color; font-weight: 600; }
+}
+
+.join-process {
+  display: grid;
+  grid-template-columns: 0.85fr 24px 1.3fr 24px 0.85fr;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 1.8rem 0 2.5rem;
+  padding: 1.2rem 0;
+  border-block: 1px solid #e6e2e9;
+
+  .join-process__step { min-width: 0; text-align: center; }
+  p { margin: 0.55rem 0 0; color: $muted-text-color; font-size: 0.75rem; line-height: 1.35; }
+}
+
+.join-process__collection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.join-process__paper {
+  position: absolute;
+  top: 12px;
+  left: calc(50% - 18px);
+  width: 53px;
+  height: 75px;
+  border: 1px solid #d8c9ad;
+  background: #eee6d5;
+  transform: rotate(12deg);
+
+  + .join-process__paper { left: calc(50% - 37px); transform: rotate(-10deg); }
+}
+
+.join-process__anchor {
+  position: relative;
+  width: 65px;
+  height: 88px;
+
+  img { width: 100%; height: 100%; object-fit: cover; object-position: left center; }
+}
+
+.join-process__candidates {
+  display: flex;
+  align-items: center;
+  height: 100px;
+
+  img { display: block; width: 100%; height: auto; }
+}
+
+.join-process__arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  color: $link-color;
+  font-size: 1.35rem;
+
+  > span:first-child {
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #ece5f1;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+}
+
+.join-process__decision {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  height: 100px;
+
+  span {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #c9d8cb;
+    border-radius: 50%;
+    background: #e8eee6;
+    color: #426148;
+    font-size: 1.2rem;
+  }
+
+  span + span { border-color: #d6ccd8; background: #f0eaf1; color: $link-color; }
+}
+
+.cue-explorer {
+  h3 { margin: 0 0 0.6rem; font-size: 1.25rem; font-weight: 500; }
+  .cue-explorer__intro { margin-bottom: 0; color: $muted-text-color; font-size: 0.85rem; }
+}
+
+.cue-explorer__canvas { position: relative; padding: 1.5rem 0; }
+
+.cue-manuscript {
+  position: relative;
+  width: 58%;
+  aspect-ratio: 17 / 18;
+  margin-inline: auto;
+
+  > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+  }
+}
+
+.cue-connections,
+.cue-manuscript__annotations {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.cue-connections {
+  z-index: 2;
+  path { fill: none; stroke: #cec4d6; stroke-width: 1.4; }
+  circle { fill: #b9a9c8; }
+  .is-active path { stroke: $link-color; stroke-width: 2; }
+  .is-active circle { fill: $link-color; }
+}
+
+.cue-manuscript__annotations {
+  rect { fill: rgba(103, 80, 128, 0.1); stroke: #675080; stroke-width: 7; }
+  path { fill: none; stroke: #675080; stroke-width: 6; }
+  [hidden] { display: none; }
+}
+
+.cue-level {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 18%;
+  min-height: 60px;
+  padding: 0.3rem 0;
+  border: 0;
+  background: $background-color;
+  color: $muted-text-color;
+  font-family: $sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover, &.is-active { color: $link-color; }
+  &.is-active { font-weight: 600; }
+  &:focus { outline: 2px solid $link-color; outline-offset: 4px; }
+}
+
+.cue-level__number {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #bba9ca;
+  border-radius: 50%;
+  background: $background-color;
+  color: $link-color;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.cue-level.is-active .cue-level__number { border-color: $link-color; background: $link-color; color: #fff; }
+.cue-level--metadata { left: 0; top: 12%; }
+.cue-level--macro { left: 0; top: 60%; }
+.cue-level--textual { right: 0; top: 20%; }
+.cue-level--micro { right: 0; top: 71%; }
+
+.cue-explorer .cue-explorer__credit {
+  margin: -0.3rem 0 1.2rem;
+  color: $muted-text-color;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.cue-explorer__details { padding-top: 1.2rem; border-top: 1px solid #e6e2e9; }
+.cue-panel[hidden] { display: none; }
+
+.cue-panel {
+  h4 {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin: 0 0 0.8rem;
+    font-family: $sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+
+    span { color: $link-color; font-size: 0.75rem; font-variant-numeric: tabular-nums; }
+  }
+
+  p { font-size: 0.9rem; }
+}
+
+.page__content .cue-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.5rem;
+  padding-left: 1rem;
+  margin: 0 0 1.1rem;
+  font-size: 0.85rem;
+
+  li { padding-left: 0.1rem; }
+  li::marker { color: $link-color; }
+}
+
+.cue-examples {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.2rem 0;
+
+  figure { display: block; min-width: 0; margin: 0; }
+  img { display: block; width: 100%; height: auto; border-radius: 4px; }
+  svg { display: block; width: 100%; height: auto; }
+  figcaption { margin-top: 0.5rem; color: $muted-text-color; font-family: $sans-serif; font-size: 0.7rem; line-height: 1.4; }
+}
+
+.cue-examples--letters { max-width: 310px; }
+.cue-panel .cue-panel__takeaway { padding-left: 0.9rem; border-left: 2px solid #c9b8d6; font-size: 0.85rem; }
+
+@media (max-width: 500px) {
+  .join-process { grid-template-columns: 0.85fr 18px 1.3fr 18px 0.85fr; gap: 0.3rem; }
+  .join-process__decision { flex-direction: column; gap: 0.3rem; }
+  .join-process__decision span { width: 27px; height: 27px; font-size: 1rem; }
+  .cue-level { font-size: 0.7rem; }
+  .cue-level__number { width: 30px; height: 30px; }
+  .cue-examples { gap: 0.7rem; }
+}
+
 @media (max-width: 700px) {
   .methodology-figure__pan-hint { display: inline; }
 }
